@@ -1,0 +1,21 @@
+2024-08-04 21:20:44,360:INFO:----------------Test Started----------------:
+2024-08-04 21:20:47,735:INFO:Trying invalid logging in flow process.:
+2024-08-04 21:20:49,686:INFO:Invalid login message is displayed.:
+2024-08-04 21:20:49,686:INFO:----------------Test Completed----------------:
+2024-08-04 21:20:51,891:INFO:----------------Test Started----------------:
+2024-08-04 21:20:55,103:INFO:Trying valid logging in flow process.:
+2024-08-04 21:20:58,940:INFO:Trying valid logging out flow process, by checking visibility of login button after submitting a logout.:
+2024-08-04 21:20:59,519:INFO:Login button is displayed.:
+2024-08-04 21:20:59,519:INFO:----------------Test Completed----------------:
+2024-08-04 21:21:01,773:INFO:----------------Test Started----------------:
+2024-08-04 21:21:04,952:INFO:Trying valid logging in flow process.:
+2024-08-04 21:21:07,468:INFO:----------------Test Completed----------------:
+2024-08-04 21:21:55,782:INFO:----------------Test Started----------------:
+2024-08-04 21:21:59,012:INFO:Trying valid logging in flow process.:
+2024-08-04 21:22:02,624:INFO:----------------Test Completed----------------
+:
+2024-08-04 21:24:33,112:INFO:----------------Test Started----------------:
+2024-08-04 21:24:36,634:INFO:Trying valid logging in flow process.:
+2024-08-04 21:24:38,567:INFO:Sending a put request to change employee full name.:
+2024-08-04 21:24:40,444:INFO:----------------Test Completed----------------
+:
