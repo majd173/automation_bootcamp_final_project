@@ -19,3 +19,57 @@
 2024-08-04 21:24:38,567:INFO:Sending a put request to change employee full name.:
 2024-08-04 21:24:40,444:INFO:----------------Test Completed----------------
 :
+2024-08-04 22:49:28,122:INFO:----------------Test Started----------------:
+2024-08-04 22:49:31,921:INFO:Trying valid logging in flow process.:
+2024-08-04 22:49:33,938:INFO:Sending a put request to change admin city and mobile number.:
+2024-08-04 22:49:45,947:INFO:----------------Test Completed----------------
+:
+2024-08-04 22:50:30,649:INFO:----------------Test Started----------------:
+2024-08-04 22:50:33,960:INFO:Trying valid logging in flow process.:
+2024-08-04 22:50:35,869:INFO:Sending a put request to change admin city and mobile number.:
+2024-08-04 22:50:48,006:INFO:----------------Test Completed----------------
+:
+2024-08-04 23:08:25,413:INFO:----------------Test Started----------------:
+2024-08-04 23:08:33,842:INFO:Trying valid logging in flow process.:
+2024-08-04 23:08:35,901:INFO:Sending a put request to change admin city and mobile number.:
+2024-08-04 23:08:39,778:ERROR:Element can not be found.:
+2024-08-04 23:08:39,801:ERROR:Element can not be found.:
+2024-08-04 23:08:39,812:INFO:----------------Test Completed----------------
+:
+2024-08-04 23:09:23,542:INFO:----------------Test Started----------------:
+2024-08-04 23:09:31,369:INFO:Trying valid logging in flow process.:
+2024-08-04 23:09:33,546:INFO:Sending a put request to change admin city and mobile number.:
+2024-08-04 23:09:37,012:ERROR:Element can not be found.:
+2024-08-04 23:09:37,032:ERROR:Element can not be found.:
+2024-08-04 23:09:37,040:INFO:----------------Test Completed----------------
+:
+2024-08-04 23:12:24,558:INFO:----------------Test Started----------------:
+2024-08-04 23:12:33,050:INFO:Trying valid logging in flow process.:
+2024-08-04 23:12:35,013:INFO:Sending a put request to change admin city and mobile number.:
+2024-08-04 23:12:48,103:INFO:----------------Test Completed----------------
+:
+2024-08-04 23:15:29,646:INFO:----------------Test Started----------------:
+2024-08-04 23:15:37,774:INFO:Trying valid logging in flow process.:
+2024-08-04 23:15:39,700:INFO:Sending a put request to change admin city and mobile number.:
+2024-08-04 23:15:46,870:INFO:----------------Test Completed----------------
+:
+2024-08-04 23:18:29,138:INFO:----------------Test Started----------------:
+2024-08-04 23:18:34,264:INFO:Trying valid logging in flow process.:
+2024-08-04 23:18:36,173:INFO:Sending a put request to change admin city and mobile number.:
+2024-08-04 23:18:41,576:INFO:----------------Test Completed----------------
+:
+2024-08-04 23:20:54,362:INFO:----------------Test Started----------------:
+2024-08-04 23:20:59,875:INFO:Trying valid logging in flow process.:
+2024-08-04 23:21:01,695:INFO:Sending a put request to change admin city and mobile number.:
+2024-08-04 23:21:06,331:INFO:----------------Test Completed----------------
+:
+2024-08-04 23:23:22,387:INFO:----------------Test Started----------------:
+2024-08-04 23:23:27,555:INFO:Trying valid logging in flow process.:
+2024-08-04 23:23:29,394:INFO:Sending a put request to change admin city and mobile number.:
+2024-08-04 23:23:34,868:INFO:----------------Test Completed----------------
+:
+2024-08-04 23:24:48,536:INFO:----------------Test Started----------------:
+2024-08-04 23:24:53,774:INFO:Trying valid logging in flow process.:
+2024-08-04 23:24:55,680:INFO:Sending a put request to change admin city and mobile number.:
+2024-08-04 23:24:59,694:INFO:----------------Test Completed----------------
+:

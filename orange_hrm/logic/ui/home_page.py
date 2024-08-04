@@ -6,11 +6,12 @@ from selenium.webdriver.common.by import By
 from orange_hrm.infra.ui.base_page import BasePage
 
 
-class UIHomePage(BasePage):
+class UiHomePage(BasePage):
     MY_INFO = "a[href='/web/index.php/pim/viewMyDetails']"
     EMPLOYEE_FULL_NAME = "//p[@class='oxd-userdropdown-name']"
     USER_DETAILS_BUTTON = "span[class='oxd-userdropdown-tab']"
     LOGOT_BUTTON = "a[href='/web/index.php/auth/logout']"
+
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -51,3 +52,13 @@ class UIHomePage(BasePage):
                 return False
         except NoSuchElementException:
             logging.error("Element can not be found.")
+
+    def click_my_info_button(self):
+        try:
+            my_info_button = self._wait.until(EC.element_to_be_clickable
+                                              ((By.CSS_SELECTOR, self.MY_INFO)))
+            my_info_button.click()
+        except NoSuchElementException:
+            logging.error("Element can not be found.")
+
+

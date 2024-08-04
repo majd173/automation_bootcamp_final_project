@@ -1,4 +1,5 @@
-import time
+import logging
+from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -9,24 +10,22 @@ from selenium.webdriver.support.expected_conditions import *
 
 class UiMyInfoPage(BasePage):
 
-    EMPLOYEE_NAME_BAR = "//p[contains(text(), 'positive man')]"
+    CONTACT_DETAILS = "//*[@id='app']/div[1]/div[2]/div[2]/div/div/div/div[1]/div[2]/div[2]/a"
 
 
 
     def __init__(self, driver):
         super().__init__(driver)
+        self._wait = WebDriverWait(self._driver, 10)
 
 
-    def refresh_page(self):
-        time.sleep(5)
-        self._driver.refresh()
 
-    def check_employee_full_name(self):
+    def click_contact_details_button(self):
         try:
-            employee_name_bar = (WebDriverWait(self._driver, 10)
-                                 .until(EC.visibility_of_element_located((By.XPATH, self.EMPLOYEE_NAME_BAR))))
-            if employee_name_bar.is_displayed():
-                return True
-            return False
+            contact_details_button = self._wait.until(EC.element_to_be_clickable
+                                                      ((By.XPATH, self.CONTACT_DETAILS)))
+            contact_details_button.click()
         except NoSuchElementException:
-            raise NoSuchElementException("An element can not be found")
+            logging.error("Element can not be found.")
+
+

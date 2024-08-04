@@ -18,9 +18,15 @@ class Utilities:
         return ''.join((random.choice(letters) for _ in range(length)))
 
     #------------------------------------------------------------------------------------------------------------
-    # This function generate automatically a random number
-    # It requires a"length" as an input.
+    # This function generates automatically a random number
+    # It requires a "length" as an input.
+    @staticmethod
+    def generate_random_number_by_length(length) -> str:
+        digits = string.digits
+        return ''.join((random.choice(digits) for _ in range(length)))
 
+    #------------------------------------------------------------------------------------------------------------
+    # This function generate automatically a random number from 1 to 100.
     @staticmethod
     def generate_random_number():
         return random.randint(1, 100)
