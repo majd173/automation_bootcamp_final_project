@@ -7,8 +7,7 @@ class BrowserWrapper:
     # This class manages choosing a browser.
     def __init__(self):
         self._driver = None  # because I still don't know which driver to choose.
-        self.config = ConfigProvider.load_from_file(
-            r'C:\Users\Admin\Desktop\Automation_bootcamp_final_project\orange_hrm\orange_hrm.json')
+        self.config = ConfigProvider.load_from_file()
 
     # ------------------------------------------------------------------------------------------------------------
     # This function determines which browser to open and also opens it.

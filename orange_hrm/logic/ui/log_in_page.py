@@ -16,8 +16,7 @@ class LogInPage(BasePage):
 
     def __init__(self, driver):
         super().__init__(driver)
-        self._config = (ConfigProvider.load_from_file
-                        (r'C:\Users\Admin\Desktop\automation_bootcamp_final_project\orange_hrm\orange_hrm.json'))
+        self._config = ConfigProvider().load_from_file()
         self._wait = WebDriverWait(self._driver, 10)
 
     def insert_username(self):

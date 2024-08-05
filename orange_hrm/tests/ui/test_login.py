@@ -17,16 +17,15 @@ class TestLogin(unittest.TestCase):
         """
         logging.info("----------------Test Started----------------")
         # ARRANGE
-        self._config = (ConfigProvider().load_from_file
-                        (r'C:\Users\Admin\Desktop\automation_bootcamp_final_project\orange_hrm\orange_hrm.json'))
+        self._config = ConfigProvider().load_from_file()
         self._driver = BrowserWrapper().get_driver()
 
     def tearDown(self):
         """
         This method closes driver.
         """
-        logging.info("----------------Test Completed----------------\n")
         self._driver.close()
+        logging.info("----------------Test Completed----------------\n")
 
     def test_valid_login_process(self):
         """

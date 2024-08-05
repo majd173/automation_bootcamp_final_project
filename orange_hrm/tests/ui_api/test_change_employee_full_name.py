@@ -20,8 +20,7 @@ class TestChangingEmployeeFullName(unittest.TestCase):
         """
         logging.info("----------------Test Started----------------")
         # ARRANGE
-        self._config = (ConfigProvider().load_from_file
-                        (r'C:\Users\Admin\Desktop\automation_bootcamp_final_project\orange_hrm\orange_hrm.json'))
+        self._config = ConfigProvider().load_from_file()
         self._driver = BrowserWrapper().get_driver()
         self._api = ApiWrapper()
 
@@ -29,10 +28,11 @@ class TestChangingEmployeeFullName(unittest.TestCase):
         """
         This method closes driver.
         """
-        logging.info("----------------Test Completed----------------\n")
         self._driver.close()
+        logging.info("----------------Test Completed----------------\n")
 
-    def test_changing_employee_fullname(self):
+
+    def test_change_employee_fullname(self):
         """
         This method tests changing employee full name - UI & API.
         Test case: TC-04 / Change employee full name.

@@ -23,8 +23,7 @@ class TestAdminDetails(unittest.TestCase):
         """
         logging.info("----------------Test Started----------------")
         # ARRANGE
-        self._config = (ConfigProvider().load_from_file
-                        (r'C:\Users\Admin\Desktop\automation_bootcamp_final_project\orange_hrm\orange_hrm.json'))
+        self._config = ConfigProvider().load_from_file()
         self._driver = BrowserWrapper().get_driver()
         self._api = ApiWrapper()
 
@@ -32,10 +31,10 @@ class TestAdminDetails(unittest.TestCase):
         """
         This method closes driver.
         """
-        logging.info("----------------Test Completed----------------\n")
         self._driver.close()
+        logging.info("----------------Test Completed----------------\n")
 
-    def test_changing_admin_city_and_mobile(self):
+    def test_change_admin_city_and_mobile(self):
         """
         This method tests changing admin city and mobile number.
         Test case: TC-05 / Change admin's details.

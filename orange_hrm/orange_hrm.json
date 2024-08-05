@@ -4,8 +4,6 @@
 
   "login_url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
   "username": "Admin",
-  "password": "admin123",
-
-  "permanent_cookie": "orangehrm=15bf0554645c6f2d7592588f0b1f4b01"
+  "password": "admin123"
 
 }

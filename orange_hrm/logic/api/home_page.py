@@ -23,8 +23,7 @@ class APIHomePage:
         try:
             self._request = request
             self._api = ApiWrapper()
-            self._config = ConfigProvider().load_from_file(
-                r'C:\Users\Admin\Desktop\Automation_bootcamp_Final_project\orange_hrm\orange_hrm.json')
+            self._config = ConfigProvider().load_from_file()
             self._url = self._config['api_base_url']
         except ImportError:
             logging.error("Can not open orange_hrm.json file.")

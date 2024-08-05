@@ -18,8 +18,7 @@ class TestActiveEmployeesNumber(unittest.TestCase):
         """
         logging.info("----------------Test Started----------------")
         # ARRANGE
-        self._config = (ConfigProvider().load_from_file
-                        (r'C:\Users\Admin\Desktop\automation_bootcamp_final_project\orange_hrm\orange_hrm.json'))
+        self._config = ConfigProvider().load_from_file()
         self._driver = BrowserWrapper().get_driver()
         self._api = ApiWrapper()
 
@@ -28,8 +27,8 @@ class TestActiveEmployeesNumber(unittest.TestCase):
         This method closes driver.
         Test case: TC-07 / Check active employees number.
         """
-        logging.info("----------------Test Completed----------------\n")
         self._driver.close()
+        logging.info("----------------Test Completed----------------\n")
 
     def test_active_employees_number(self):
         # ACT
