@@ -29,7 +29,6 @@ class AdminContactDetails:
     def mobile(self, value):
         self._mobile = value
 
-
     def to_dict(self):
         return {
             "street1": "",
@@ -44,6 +43,3 @@ class AdminContactDetails:
             "workEmail": "paul1@osohrm.com",
             "otherEmail": ""
         }
-
-
-

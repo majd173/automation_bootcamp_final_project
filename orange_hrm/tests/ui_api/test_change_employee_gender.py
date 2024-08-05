@@ -1,15 +1,14 @@
 import logging
 import unittest
+from orange_hrm.logic.config_provider import ConfigProvider
 #-----------------------------API CLASSES----------------------------
 from orange_hrm.logic.api.home_page import APIHomePage
 from orange_hrm.infra.api.api_wrapper import ApiWrapper
-from orange_hrm.infra.api.config_provider import ConfigProvider
-from orange_hrm.infra.api.utilities import Utilities
+from orange_hrm.infra.utilities import Utilities
 from orange_hrm.logic.api.enums.preson_object import PersonObject
 #-----------------------------UI CLASSES-----------------------------
 from orange_hrm.logic.ui.log_in_page import LogInPage
 from orange_hrm.logic.ui.home_page import UiHomePage
-from orange_hrm.infra.ui.config_provider import ConfigProvider
 from orange_hrm.infra.ui.browser_wrapper import BrowserWrapper
 from orange_hrm.logic.ui.my_info_page import UiMyInfoPage
 
@@ -36,6 +35,8 @@ class TestChangeEmployeeGender(unittest.TestCase):
                                 Utilities.generate_random_string_only_letters(5),
                                 1)
         self._api_home_page.change_employee_gender(self._cookie, employee)
+        # self._jira_flag.create_jira_issue_teardown(
+        #     'self._config["jira_key"]', 'test_add_users_list', 'Make sure database was created', 'Task')
         self._driver.close()
         logging.info("----------------Test Completed----------------\n")
 

@@ -1,6 +1,5 @@
-import json
 import requests
-from orange_hrm.infra.api.logger_setup import LoggingSetup
+
 
 class ApiWrapper:
     """

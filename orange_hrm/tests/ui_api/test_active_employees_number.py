@@ -1,13 +1,12 @@
 import logging
 import unittest
+from orange_hrm.logic.config_provider import ConfigProvider
 #-----------------------------API CLASSES----------------------------
 from orange_hrm.logic.api.home_page import APIHomePage
 from orange_hrm.infra.api.api_wrapper import ApiWrapper
-from orange_hrm.infra.api.config_provider import ConfigProvider
 #-----------------------------UI CLASSES-----------------------------
 from orange_hrm.logic.ui.log_in_page import LogInPage
 from orange_hrm.logic.ui.home_page import UiHomePage
-from orange_hrm.infra.ui.config_provider import ConfigProvider
 from orange_hrm.infra.ui.browser_wrapper import BrowserWrapper
 
 

@@ -4,8 +4,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from orange_hrm.infra.ui.base_page import BasePage
-from orange_hrm.infra.ui.config_provider import ConfigProvider
-from orange_hrm.infra.ui.utilities import Utilities
+from orange_hrm.logic.config_provider import ConfigProvider
+from orange_hrm.infra.utilities import Utilities
 
 
 class LogInPage(BasePage):
