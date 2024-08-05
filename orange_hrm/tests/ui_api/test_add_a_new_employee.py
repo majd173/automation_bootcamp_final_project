@@ -1,6 +1,6 @@
 import logging
 import unittest
-from orange_hrm.logic.api.enums.admin_contact_details import AdminContactDetails
+from orange_hrm.logic.api.enums.employee_object import EmployeeObject
 #-----------------------------API CLASSES----------------------------
 from orange_hrm.logic.api.home_page import APIHomePage
 from orange_hrm.infra.api.api_wrapper import ApiWrapper
@@ -11,11 +11,11 @@ from orange_hrm.logic.ui.log_in_page import LogInPage
 from orange_hrm.logic.ui.home_page import UiHomePage
 from orange_hrm.infra.ui.config_provider import ConfigProvider
 from orange_hrm.infra.ui.browser_wrapper import BrowserWrapper
-from orange_hrm.logic.ui.my_info_page import UiMyInfoPage
-from orange_hrm.logic.ui.contact_details_page import UiContactDetailsPage
+
+from orange_hrm.logic.ui.pim_page import UiPimPage
 
 
-class TestAdminDetails(unittest.TestCase):
+class TestAddANewEmployee(unittest.TestCase):
 
 
     def setUp(self):
@@ -36,27 +36,28 @@ class TestAdminDetails(unittest.TestCase):
         logging.info("----------------Test Completed----------------\n")
         self._driver.close()
 
-    def test_changing_admin_city_and_mobile(self):
+    def test_add_a_new_employee(self):
         """
-        This method tests changing admin city and mobile number.
-        Test case: TC-05 / Change admin's details.
+        This method tests add a new employee.
+        Test case: TC-06 / Add a new employee.
         """
         # ACT
         self._login_page = LogInPage(self._driver)
         cookie = self._login_page.valid_login_flow()
         self._api_home_page = APIHomePage(self._api)
-        admin = AdminContactDetails(
-            Utilities.generate_random_string_only_letters(6),
-            Utilities.generate_random_number_by_length(10))
-        self._api_home_page.change_admin_city_and_mobile(cookie, admin)
+        employee = EmployeeObject(Utilities.generate_random_number_by_length(3),
+                                  Utilities.generate_random_string_only_letters(7),
+                                  Utilities.generate_random_string_only_letters(7),
+                                  Utilities.generate_random_string_only_letters(7))
+        self._api_home_page.add_a_new_employee(cookie, employee)
         self._home_page = UiHomePage(self._driver)
-        self._home_page.click_my_info_button()
-        self._my_info_page = UiMyInfoPage(self._driver)
-        self._my_info_page.click_contact_details_button()
-        self._contact_details_page = UiContactDetailsPage(self._driver)
+        self._home_page.click_pim_button()
+        self._pim_page = UiPimPage(self._driver)
         # ASSERT
-        self.assertEqual(self._contact_details_page.check_city_field_displayed(), admin.city)
-        self.assertEqual(self._contact_details_page.check_mobile_field_displayed(), admin.mobile)
+        self.assertIn(employee.firstname, self._pim_page.check_employee_existence())
+        self.assertIn(employee.lastname, self._pim_page.check_employee_existence())
+        self.assertIn(employee.middle_name, self._pim_page.check_employee_existence())
+        self.assertIn(employee.id, self._pim_page.check_employee_existence())
 
 
 

@@ -73,6 +73,7 @@ class LogInPage(BasePage):
         cookies = self._driver.get_cookies()
         return f'orangehrm={cookies[0]['value']}'
 
+
     def invalid_login_flow(self):
         logging.info("Trying invalid logging in flow process.")
         self.insert_generated_username()

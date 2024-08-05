@@ -10,7 +10,10 @@ class UiHomePage(BasePage):
     MY_INFO = "a[href='/web/index.php/pim/viewMyDetails']"
     EMPLOYEE_FULL_NAME = "//p[@class='oxd-userdropdown-name']"
     USER_DETAILS_BUTTON = "span[class='oxd-userdropdown-tab']"
+    ABOUT_BUTTON = "a[href='#']"
+    ACTIVE_EMPLOYEES = "//*[@id='app']/div[2]/div/div/div/div[2]/div[6]/p"
     LOGOT_BUTTON = "a[href='/web/index.php/auth/logout']"
+    PIM_BUTTON = "a[href='/web/index.php/pim/viewPimModule']"
 
 
     def __init__(self, driver):
@@ -60,5 +63,20 @@ class UiHomePage(BasePage):
             my_info_button.click()
         except NoSuchElementException:
             logging.error("Element can not be found.")
+
+    def click_pim_button(self):
+        try:
+            pim_button = self._wait.until(EC.element_to_be_clickable
+                                          ((By.CSS_SELECTOR, self.PIM_BUTTON)))
+            pim_button.click()
+        except NoSuchElementException:
+            logging.error("Element can not be found.")
+
+    def click_about_button(self):
+        self.click_user_details_button()
+        about_button = (self._wait.until
+                        (EC.element_to_be_clickable
+                         ((By.CSS_SELECTOR, self.ABOUT_BUTTON))))
+        about_button.click()
 
 

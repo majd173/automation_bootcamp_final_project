@@ -13,13 +13,14 @@ from orange_hrm.infra.ui.config_provider import ConfigProvider
 from orange_hrm.infra.ui.browser_wrapper import BrowserWrapper
 
 
-class TestOrangeHrm(unittest.TestCase):
+class TestChangingEmployeeFullName(unittest.TestCase):
 
     def setUp(self):
         """
         This method initializes driver and loads config file.
         """
         logging.info("----------------Test Started----------------")
+        # ARRANGE
         self._config = (ConfigProvider().load_from_file
                         (r'C:\Users\Admin\Desktop\automation_bootcamp_final_project\orange_hrm\orange_hrm.json'))
         self._driver = BrowserWrapper().get_driver()
@@ -35,8 +36,9 @@ class TestOrangeHrm(unittest.TestCase):
     def test_changing_employee_fullname(self):
         """
         This method tests changing employee full name - UI & API.
-        Test case no: 4 \
+        Test case: TC-04 / Change employee full name.
         """
+        # ACT
         self._login_page = LogInPage(self._driver)
         cookie = self._login_page.valid_login_flow()
         self._api_home_page = APIHomePage(self._api)
@@ -44,8 +46,10 @@ class TestOrangeHrm(unittest.TestCase):
                                      Utilities.generate_random_string_only_letters(5).lower(),
                                      Utilities.generate_random_string_only_letters(5).lower())
         self._api_home_page.change_employee_full_name(cookie, person_object)
+        print(person_object.first_name, person_object.last_name, )
         home_page = UiHomePage(self._driver)
         home_page.refresh_page()
+        # ASSERT
         self.assertEqual(home_page.get_admin_full_name()[0], person_object.first_name)
         self.assertEqual(home_page.get_admin_full_name()[1], person_object.last_name)
 

@@ -73,3 +73,220 @@
 2024-08-04 23:24:55,680:INFO:Sending a put request to change admin city and mobile number.:
 2024-08-04 23:24:59,694:INFO:----------------Test Completed----------------
 :
+2024-08-05 10:18:43,974:INFO:----------------Test Started----------------:
+2024-08-05 10:18:49,370:INFO:Trying valid logging in flow process.:
+2024-08-05 10:18:51,822:INFO:Sending a post request to add a new employee.:
+2024-08-05 10:18:55,998:INFO:----------------Test Completed----------------
+:
+2024-08-05 10:19:41,806:INFO:----------------Test Started----------------:
+2024-08-05 10:19:44,875:INFO:Trying valid logging in flow process.:
+2024-08-05 10:20:28,716:INFO:Sending a post request to add a new employee.:
+2024-08-05 10:21:45,016:INFO:----------------Test Started----------------:
+2024-08-05 10:21:47,796:INFO:Trying valid logging in flow process.:
+2024-08-05 10:22:13,565:INFO:Sending a post request to add a new employee.:
+2024-08-05 10:25:08,366:INFO:----------------Test Started----------------:
+2024-08-05 10:25:11,820:INFO:Trying valid logging in flow process.:
+2024-08-05 10:25:13,874:INFO:Sending a put request to change employee full name.:
+2024-08-05 10:25:16,491:INFO:----------------Test Completed----------------
+:
+2024-08-05 10:31:22,162:INFO:----------------Test Started----------------:
+2024-08-05 10:31:25,169:INFO:Trying valid logging in flow process.:
+2024-08-05 10:31:26,802:INFO:Sending a put request to change employee full name.:
+2024-08-05 10:31:28,426:INFO:----------------Test Completed----------------
+:
+2024-08-05 10:32:45,745:INFO:----------------Test Started----------------:
+2024-08-05 10:32:49,157:INFO:Trying valid logging in flow process.:
+2024-08-05 10:32:50,833:INFO:Sending a put request to change employee full name.:
+2024-08-05 10:32:52,491:INFO:----------------Test Completed----------------
+:
+2024-08-05 10:37:06,959:INFO:----------------Test Started----------------:
+2024-08-05 10:37:10,506:INFO:Trying valid logging in flow process.:
+2024-08-05 10:37:12,297:INFO:Sending a put request to change employee full name.:
+2024-08-05 10:37:14,398:INFO:----------------Test Completed----------------
+:
+2024-08-05 10:37:33,983:INFO:----------------Test Started----------------:
+2024-08-05 10:37:36,689:INFO:Trying valid logging in flow process.:
+2024-08-05 10:37:52,345:INFO:Sending a put request to change employee full name.:
+2024-08-05 10:41:24,063:INFO:----------------Test Completed----------------
+:
+2024-08-05 10:41:28,134:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001D589D489B0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/5b6bccee8b80e961f2b02bd79f00801b/window:
+2024-08-05 10:42:13,371:INFO:----------------Test Started----------------:
+2024-08-05 10:42:16,495:INFO:Trying valid logging in flow process.:
+2024-08-05 10:42:18,159:INFO:Sending a put request to change employee full name.:
+2024-08-05 10:42:18,691:INFO:Sending a put request to change employee full name.:
+2024-08-05 10:42:20,081:INFO:----------------Test Completed----------------
+:
+2024-08-05 10:43:02,180:INFO:----------------Test Started----------------:
+2024-08-05 10:43:05,835:INFO:Trying valid logging in flow process.:
+2024-08-05 10:43:08,720:INFO:Sending a put request to change employee full name.:
+2024-08-05 10:43:09,394:INFO:Sending a put request to change employee full name.:
+2024-08-05 10:43:12,215:INFO:----------------Test Completed----------------
+:
+2024-08-05 10:43:27,957:INFO:----------------Test Started----------------:
+2024-08-05 10:43:30,819:INFO:Trying valid logging in flow process.:
+2024-08-05 10:43:32,384:INFO:Sending a put request to change employee full name.:
+2024-08-05 10:43:32,861:INFO:Sending a put request to change employee full name.:
+2024-08-05 10:43:34,313:INFO:----------------Test Completed----------------
+:
+2024-08-05 10:43:47,343:INFO:----------------Test Started----------------:
+2024-08-05 10:43:50,125:INFO:Trying valid logging in flow process.:
+2024-08-05 10:43:51,741:INFO:Sending a put request to change employee full name.:
+2024-08-05 10:43:52,198:INFO:Sending a put request to change employee full name.:
+2024-08-05 10:43:53,608:INFO:----------------Test Completed----------------
+:
+2024-08-05 10:44:41,265:INFO:----------------Test Started----------------:
+2024-08-05 10:44:43,963:INFO:Trying valid logging in flow process.:
+2024-08-05 10:44:45,664:INFO:Sending a put request to change employee full name.:
+2024-08-05 10:44:47,346:INFO:----------------Test Completed----------------
+:
+2024-08-05 10:45:06,378:INFO:----------------Test Started----------------:
+2024-08-05 10:45:09,481:INFO:Trying valid logging in flow process.:
+2024-08-05 10:45:11,509:INFO:Sending a put request to change employee full name.:
+2024-08-05 10:45:14,618:INFO:----------------Test Completed----------------
+:
+2024-08-05 10:49:44,269:INFO:----------------Test Started----------------:
+2024-08-05 10:49:47,187:INFO:Trying valid logging in flow process.:
+2024-08-05 10:49:48,844:INFO:Sending a put request to change employee full name.:
+2024-08-05 10:49:50,527:INFO:----------------Test Completed----------------
+:
+2024-08-05 10:50:04,179:INFO:----------------Test Started----------------:
+2024-08-05 10:50:07,177:INFO:Trying valid logging in flow process.:
+2024-08-05 10:50:09,401:INFO:Sending a put request to change admin city and mobile number.:
+2024-08-05 10:50:16,183:INFO:----------------Test Completed----------------
+:
+2024-08-05 10:50:35,482:INFO:----------------Test Started----------------:
+2024-08-05 10:50:38,213:INFO:Trying valid logging in flow process.:
+2024-08-05 10:50:39,834:INFO:Sending a put request to change admin city and mobile number.:
+2024-08-05 10:51:49,422:INFO:----------------Test Completed----------------
+:
+2024-08-05 10:51:53,499:WARNING:Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x0000020AA24FC5C0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it')': /session/9fdbacf82deca80f93c1b8be5ceb1b23/window:
+2024-08-05 10:52:53,404:INFO:----------------Test Started----------------:
+2024-08-05 10:52:56,390:INFO:Trying valid logging in flow process.:
+2024-08-05 10:52:58,100:INFO:Sending a put request to change admin city and mobile number.:
+2024-08-05 10:53:01,821:INFO:----------------Test Completed----------------
+:
+2024-08-05 11:02:49,769:INFO:----------------Test Started----------------:
+2024-08-05 11:02:52,824:INFO:Trying valid logging in flow process.:
+2024-08-05 11:02:54,482:INFO:Sending a put request to change employee full name.:
+2024-08-05 11:02:56,202:INFO:----------------Test Completed----------------
+:
+2024-08-05 11:22:07,266:INFO:----------------Test Started----------------:
+2024-08-05 11:22:11,526:INFO:Trying valid logging in flow process.:
+2024-08-05 11:22:13,729:INFO:Sending a put request to change employee full name.:
+2024-08-05 11:22:14,548:ERROR:Put request has not been sent.: 404 Client Error: Not Found for url: https://opensource-demo.orangehrmlive.com/web/index.php/v2/pim/employees/7/personal-details:
+2024-08-05 11:22:16,036:INFO:----------------Test Completed----------------
+:
+2024-08-05 11:44:21,734:INFO:----------------Test Started----------------:
+2024-08-05 11:44:25,482:INFO:Trying valid logging in flow process.:
+2024-08-05 11:44:27,280:INFO:Sending a put request to change employee full name.:
+2024-08-05 11:44:29,032:INFO:----------------Test Completed----------------
+:
+2024-08-05 11:45:00,224:INFO:----------------Test Started----------------:
+2024-08-05 11:45:04,143:INFO:Trying valid logging in flow process.:
+2024-08-05 11:45:06,860:INFO:Sending a put request to change employee full name.:
+2024-08-05 11:59:15,826:INFO:----------------Test Started----------------:
+2024-08-05 11:59:19,091:INFO:Trying valid logging in flow process.:
+2024-08-05 11:59:20,978:INFO:Sending a put request to change employee full name.:
+2024-08-05 11:59:22,579:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:00:47,041:INFO:----------------Test Started----------------:
+2024-08-05 12:00:50,358:INFO:Trying valid logging in flow process.:
+2024-08-05 12:00:52,271:INFO:Sending a put request to change employee full name.:
+2024-08-05 12:00:53,750:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:01:59,993:INFO:----------------Test Started----------------:
+2024-08-05 12:02:03,378:INFO:Trying valid logging in flow process.:
+2024-08-05 12:02:06,725:INFO:Sending a put request to change employee full name.:
+2024-08-05 12:02:08,560:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:03:10,325:INFO:----------------Test Started----------------:
+2024-08-05 12:03:19,303:INFO:Trying valid logging in flow process.:
+2024-08-05 12:03:21,412:INFO:Sending a put request to change employee full name.:
+2024-08-05 12:03:23,339:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:05:02,337:INFO:----------------Test Started----------------:
+2024-08-05 12:05:05,867:INFO:Trying valid logging in flow process.:
+2024-08-05 12:05:08,292:INFO:Sending a put request to change employee full name.:
+2024-08-05 12:05:11,681:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:06:32,942:INFO:----------------Test Started----------------:
+2024-08-05 12:06:36,217:INFO:Trying valid logging in flow process.:
+2024-08-05 12:06:37,995:INFO:Sending a put request to change employee full name.:
+2024-08-05 12:06:39,706:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:09:26,737:INFO:----------------Test Started----------------:
+2024-08-05 12:09:30,803:INFO:Trying valid logging in flow process.:
+2024-08-05 12:09:32,806:INFO:Sending a put request to change employee full name.:
+2024-08-05 12:09:34,697:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:09:52,469:INFO:----------------Test Started----------------:
+2024-08-05 12:09:55,818:INFO:Trying valid logging in flow process.:
+2024-08-05 12:09:57,801:INFO:Sending a put request to change admin city and mobile number.:
+2024-08-05 12:10:02,825:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:10:43,283:INFO:----------------Test Started----------------:
+2024-08-05 12:10:46,482:INFO:Trying valid logging in flow process.:
+2024-08-05 12:10:48,388:INFO:Sending a put request to change admin city and mobile number.:
+2024-08-05 12:10:52,526:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:11:15,890:INFO:----------------Test Started----------------:
+2024-08-05 12:11:19,052:INFO:Trying valid logging in flow process.:
+2024-08-05 12:11:20,966:INFO:Sending a post request to add a new employee.:
+2024-08-05 12:11:23,765:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:13:23,407:INFO:----------------Test Started----------------:
+2024-08-05 12:13:26,944:INFO:Trying valid logging in flow process.:
+2024-08-05 12:13:28,851:INFO:Sending a post request to add a new employee.:
+2024-08-05 12:13:31,460:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:16:38,200:INFO:----------------Test Started----------------:
+2024-08-05 12:16:41,525:INFO:Trying valid logging in flow process.:
+2024-08-05 12:16:43,492:INFO:Sending a post request to add a new employee.:
+2024-08-05 12:16:55,291:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:18:15,919:INFO:----------------Test Started----------------:
+2024-08-05 12:18:19,298:INFO:Trying valid logging in flow process.:
+2024-08-05 12:18:21,174:INFO:Sending a post request to add a new employee.:
+2024-08-05 12:18:23,373:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:21:33,131:INFO:----------------Test Started----------------:
+2024-08-05 12:21:37,004:INFO:Trying valid logging in flow process.:
+2024-08-05 12:21:38,918:INFO:Sending a post request to add a new employee.:
+2024-08-05 12:21:41,456:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:23:14,777:INFO:----------------Test Started----------------:
+2024-08-05 12:23:18,652:INFO:Trying valid logging in flow process.:
+2024-08-05 12:23:20,597:INFO:Sending a post request to add a new employee.:
+2024-08-05 12:23:23,254:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:24:44,156:INFO:----------------Test Started----------------:
+2024-08-05 12:24:47,284:INFO:Trying valid logging in flow process.:
+2024-08-05 12:24:49,017:INFO:Sending a post request to add a new employee.:
+2024-08-05 12:24:51,716:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:26:36,618:INFO:----------------Test Started----------------:
+2024-08-05 12:26:40,274:INFO:Trying valid logging in flow process.:
+2024-08-05 12:26:42,117:INFO:Sending a post request to add a new employee.:
+2024-08-05 12:26:44,645:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:28:43,551:INFO:----------------Test Started----------------:
+2024-08-05 12:28:51,987:INFO:Trying valid logging in flow process.:
+2024-08-05 12:28:54,439:INFO:Sending a post request to add a new employee.:
+2024-08-05 12:30:26,550:INFO:----------------Test Started----------------:
+2024-08-05 12:30:29,739:INFO:Trying valid logging in flow process.:
+2024-08-05 12:30:31,537:INFO:Sending a post request to add a new employee.:
+2024-08-05 12:30:34,335:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:32:24,320:INFO:----------------Test Started----------------:
+2024-08-05 12:32:27,514:INFO:Trying valid logging in flow process.:
+2024-08-05 12:32:29,455:INFO:Sending a post request to add a new employee.:
+2024-08-05 12:36:48,070:INFO:----------------Test Started----------------:
+2024-08-05 12:36:51,638:INFO:Trying valid logging in flow process.:
+2024-08-05 12:36:53,561:INFO:Sending a post request to add a new employee.:
+2024-08-05 12:36:56,414:INFO:----------------Test Completed----------------
+:
+2024-08-05 12:38:36,545:INFO:----------------Test Started----------------:
+2024-08-05 12:38:39,817:INFO:Trying valid logging in flow process.:
+2024-08-05 12:38:42,012:INFO:Sending a post request to add a new employee.:
+2024-08-05 12:38:46,120:INFO:----------------Test Completed----------------
+:

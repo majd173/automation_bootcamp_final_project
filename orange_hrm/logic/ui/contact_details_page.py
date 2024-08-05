@@ -14,14 +14,7 @@ class UiContactDetailsPage(BasePage):
     def __init__(self, driver):
         super().__init__(driver)
         self._wait = WebDriverWait(self._driver, 10)
-        # try:
-        #     self._city_field = self._driver.find_element(By.XPATH, self.CITY_FIELD)
-        # except NoSuchElementException:
-        #     logging.error("Element can not be found.")
-        # try:
-        #     self._mobile_field = self._driver.find_element(By.XPATH, self.MOBILE_FIELD)
-        # except NoSuchElementException:
-        #     logging.error("Element can not be found.")
+
 
     def check_city_field_displayed(self):
         try:

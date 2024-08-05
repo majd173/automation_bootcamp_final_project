@@ -1,11 +1,11 @@
 {
-  "api_base_url": "https://opensource-demo.orangehrmlive.com/web/index.php/",
+  "api_base_url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/",
   "browser" : "Chrome",
 
   "login_url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
   "username": "Admin",
   "password": "admin123",
 
-  "permanent_cookie": "orangehrm=310117ea4ee2d44c107548c3b65124f6"
+  "permanent_cookie": "orangehrm=15bf0554645c6f2d7592588f0b1f4b01"
 
 }
