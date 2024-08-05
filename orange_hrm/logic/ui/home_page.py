@@ -79,4 +79,9 @@ class UiHomePage(BasePage):
                          ((By.CSS_SELECTOR, self.ABOUT_BUTTON))))
         about_button.click()
 
+    def check_active_employees(self):
+        active_employees = self._wait.until(EC.visibility_of_element_located
+                                            ((By.XPATH, self.ACTIVE_EMPLOYEES)))
+        return active_employees.text
+
 
