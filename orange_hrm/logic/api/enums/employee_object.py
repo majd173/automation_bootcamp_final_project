@@ -1,4 +1,7 @@
 class EmployeeObject:
+    """
+    This class manages an employee object creation.
+    """
     def __init__(self, id, firstname, middle_name, lastname):
         self.id = id
         self.firstname = firstname
@@ -38,6 +41,9 @@ class EmployeeObject:
         self._lastname = value
 
     def to_dict(self):
+        """
+        This method returns an employee object as a dictionary.
+        """
         return {
                   "firstName": self.firstname,
                   "middleName": self.middle_name,

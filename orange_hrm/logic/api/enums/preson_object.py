@@ -1,4 +1,7 @@
 class PersonObject:
+    """
+    This class manages person object creation.
+    """
 
     def __init__(self, first_name, middle_name, last_name, gender):
         self.first_name = first_name
@@ -46,6 +49,9 @@ class PersonObject:
         self._gender = value
 
     def to_dict(self):
+        """
+        This method returns person object in dictionary format.
+        """
         return {
             "lastName": self._last_name,
             "firstName": self._first_name,

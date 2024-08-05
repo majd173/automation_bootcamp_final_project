@@ -1,4 +1,7 @@
 class AdminContactDetails:
+    """
+    This class manages the contact details of an admin.
+    """
 
     def __init__(self, city, mobile):
         self.street1 = ""
@@ -30,6 +33,9 @@ class AdminContactDetails:
         self._mobile = value
 
     def to_dict(self):
+        """
+        This method returns the contact details of an admin as a dictionary.
+        """
         return {
             "street1": "",
             "street2": "",
