@@ -1,6 +1,6 @@
 class PersonObject:
 
-    def __init__(self, first_name, middle_name, last_name):
+    def __init__(self, first_name, middle_name, last_name, gender):
         self.first_name = first_name
         self.middle_name = middle_name
         self.last_name = last_name
@@ -8,7 +8,7 @@ class PersonObject:
         self.otherId = 3443
         self.drivingLicenseNo = 123456789
         self.drivingLicenseExpiredDate = "2023-10-18"
-        self.gender = 1
+        self.gender = gender
         self.maritalStatus = "Single"
         self.birthday = "2023-10-21"
         self.nationalityId = 4
@@ -37,6 +37,14 @@ class PersonObject:
     def last_name(self, value):
         self._last_name = value
 
+    @property
+    def gender(self):
+        return self._gender
+
+    @gender.setter
+    def gender(self, value):
+        self._gender = value
+
     def to_dict(self):
         return {
             "lastName": self._last_name,
@@ -46,7 +54,7 @@ class PersonObject:
             "otherId": "3443",
             "drivingLicenseNo": "123456789",
             "drivingLicenseExpiredDate": "2023-10-18",
-            "gender": 1,
+            "gender": self._gender,
             "maritalStatus": "Single",
             "birthday": "2023-10-21",
             "nationalityId": 4

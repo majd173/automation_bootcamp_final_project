@@ -11,9 +11,10 @@ from orange_hrm.logic.ui.log_in_page import LogInPage
 from orange_hrm.logic.ui.home_page import UiHomePage
 from orange_hrm.infra.ui.config_provider import ConfigProvider
 from orange_hrm.infra.ui.browser_wrapper import BrowserWrapper
+from orange_hrm.logic.ui.my_info_page import UiMyInfoPage
 
 
-class TestChangingEmployeeFullName(unittest.TestCase):
+class TestChangeEmployeeGender(unittest.TestCase):
 
     def setUp(self):
         """
@@ -28,30 +29,35 @@ class TestChangingEmployeeFullName(unittest.TestCase):
 
     def tearDown(self):
         """
-        This method closes driver.
+        This method closes driver, and restores employee gender.
         """
-        logging.info("----------------Test Completed----------------\n")
+        employee = PersonObject(Utilities.generate_random_string_only_letters(5),
+                                Utilities.generate_random_string_only_letters(5),
+                                Utilities.generate_random_string_only_letters(5),
+                                1)
+        self._api_home_page.change_employee_gender(self._cookie, employee)
         self._driver.close()
+        logging.info("----------------Test Completed----------------\n")
 
-    def test_changing_employee_fullname(self):
+    def test_change_employee_gender(self):
         """
-        This method tests changing employee full name - UI & API.
-        Test case: TC-04 / Change employee full name.
+        This method tests change employee gender.
+        Test case: TC-08 / Change employee's gender.
         """
         # ACT
         self._login_page = LogInPage(self._driver)
-        cookie = self._login_page.valid_login_flow()
+        self._cookie = self._login_page.valid_login_flow()
         self._api_home_page = APIHomePage(self._api)
-        person_object = PersonObject(Utilities.generate_random_string_only_letters(5).lower(),
-                                     Utilities.generate_random_string_only_letters(5).lower(),
-                                     Utilities.generate_random_string_only_letters(5).lower(),
-                                     1)
-        self._api_home_page.change_employee_full_name(cookie, person_object)
-        home_page = UiHomePage(self._driver)
-        home_page.refresh_page()
+        employee = PersonObject(Utilities.generate_random_string_only_letters(5),
+                                Utilities.generate_random_string_only_letters(5),
+                                Utilities.generate_random_string_only_letters(5),
+                                2)
+        self._api_home_page.change_employee_gender(self._cookie, employee)
+        self._ui_home_page = UiHomePage(self._driver)
+        self._ui_home_page.click_my_info_button()
+        self._ui_my_info_page = UiMyInfoPage(self._driver)
         # ASSERT
-        self.assertEqual(home_page.get_admin_full_name()[0], person_object.first_name)
-        self.assertEqual(home_page.get_admin_full_name()[1], person_object.last_name)
+        self.assertTrue(self._ui_my_info_page.check_female_button_clickable())
 
 
 if __name__ == '__main__':

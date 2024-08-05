@@ -329,3 +329,65 @@
 2024-08-05 16:17:09,685:INFO:Sending a get request to get :
 2024-08-05 16:17:11,782:INFO:----------------Test Completed----------------
 :
+2024-08-05 17:01:49,751:INFO:----------------Test Started----------------:
+2024-08-05 17:01:54,039:INFO:Trying valid logging in flow process.:
+2024-08-05 17:01:55,794:INFO:Sending a get request to get :
+2024-08-05 17:01:56,263:INFO:Sending a get request to get :
+2024-08-05 17:01:57,984:INFO:----------------Test Completed----------------
+:
+2024-08-05 21:34:13,291:INFO:----------------Test Started----------------:
+2024-08-05 21:34:25,687:INFO:Trying valid logging in flow process.:
+2024-08-05 21:34:27,734:INFO:Sending a put request to change employee gender.:
+2024-08-05 21:34:39,930:INFO:----------------Test Completed----------------
+:
+2024-08-05 21:35:18,115:INFO:----------------Test Started----------------:
+2024-08-05 21:35:27,544:INFO:Trying valid logging in flow process.:
+2024-08-05 21:35:29,402:INFO:Sending a put request to change employee gender.:
+2024-08-05 21:35:30,915:INFO:----------------Test Completed----------------
+:
+2024-08-05 21:38:56,256:INFO:----------------Test Started----------------:
+2024-08-05 21:39:06,177:INFO:Trying valid logging in flow process.:
+2024-08-05 21:39:08,249:INFO:Sending a put request to change employee gender.:
+2024-08-05 21:39:09,956:INFO:----------------Test Completed----------------
+:
+2024-08-05 21:39:53,519:INFO:----------------Test Started----------------:
+2024-08-05 21:40:03,288:INFO:Trying valid logging in flow process.:
+2024-08-05 21:40:05,382:INFO:----------------Test Completed----------------
+:
+2024-08-05 21:40:22,472:INFO:----------------Test Started----------------:
+2024-08-05 21:40:33,056:INFO:Trying valid logging in flow process.:
+2024-08-05 21:40:34,974:INFO:Sending a put request to change employee full name.:
+2024-08-05 21:40:36,994:INFO:----------------Test Completed----------------
+:
+2024-08-05 21:44:54,137:INFO:----------------Test Started----------------:
+2024-08-05 21:45:04,245:INFO:Trying valid logging in flow process.:
+2024-08-05 21:45:08,910:INFO:Sending a put request to change employee gender.:
+2024-08-05 21:45:10,979:INFO:----------------Test Completed----------------
+:
+2024-08-05 21:50:46,246:INFO:----------------Test Started----------------:
+2024-08-05 21:50:54,953:INFO:Trying valid logging in flow process.:
+2024-08-05 21:50:56,858:INFO:Sending a put request to change employee gender.:
+2024-08-05 21:50:58,376:INFO:----------------Test Completed----------------
+:
+2024-08-05 21:51:27,869:INFO:----------------Test Started----------------:
+2024-08-05 21:51:35,710:INFO:Trying valid logging in flow process.:
+2024-08-05 21:51:37,613:INFO:Sending a put request to change employee gender.:
+2024-08-05 21:51:39,023:INFO:----------------Test Completed----------------
+:
+2024-08-05 21:52:23,494:INFO:----------------Test Started----------------:
+2024-08-05 21:52:31,982:INFO:Trying valid logging in flow process.:
+2024-08-05 21:52:34,026:INFO:Sending a put request to change employee gender.:
+2024-08-05 21:52:37,266:INFO:----------------Test Completed----------------
+:
+2024-08-05 21:58:45,926:INFO:----------------Test Started----------------:
+2024-08-05 21:58:56,766:INFO:Trying valid logging in flow process.:
+2024-08-05 21:58:58,859:INFO:Sending a put request to change employee gender.:
+2024-08-05 21:59:02,710:INFO:Sending a put request to change employee gender.:
+2024-08-05 21:59:03,504:INFO:----------------Test Completed----------------
+:
+2024-08-05 22:00:27,642:INFO:----------------Test Started----------------:
+2024-08-05 22:00:35,191:INFO:Trying valid logging in flow process.:
+2024-08-05 22:00:37,057:INFO:Sending a put request to change employee gender.:
+2024-08-05 22:00:40,357:INFO:Sending a put request to change employee gender.:
+2024-08-05 22:00:41,062:INFO:----------------Test Completed----------------
+:

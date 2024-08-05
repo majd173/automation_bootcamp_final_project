@@ -66,7 +66,7 @@ class LogInPage(BasePage):
             logging.error("Element can not be found.")
 
     def valid_login_flow(self):
-        logging.info("Trying valid logging in flow process.")
+        logging.info("Trying a valid logging in flow process.")
         self.insert_username()
         self.insert_password()
         self.click_log_in_button()
@@ -75,7 +75,7 @@ class LogInPage(BasePage):
 
 
     def invalid_login_flow(self):
-        logging.info("Trying invalid logging in flow process.")
+        logging.info("Trying an invalid logging in flow process.")
         self.insert_generated_username()
         self.insert_generated_password()
         self.click_log_in_button()

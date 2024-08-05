@@ -11,7 +11,6 @@ from orange_hrm.infra.ui.config_provider import ConfigProvider
 from orange_hrm.infra.ui.browser_wrapper import BrowserWrapper
 
 
-
 class TestActiveEmployeesNumber(unittest.TestCase):
 
     def setUp(self):
@@ -39,13 +38,13 @@ class TestActiveEmployeesNumber(unittest.TestCase):
         cookie = self._login_page.valid_login_flow()
         self._api_home_page = APIHomePage(self._api)
         self._api_home_page.get_active_employees_number(cookie)
-        get_request_response = self._api_home_page.get_active_employees_number(cookie).json()
-        active_employees = get_request_response['data']['numberOfActiveEmployee']
+        active_employees_response_data = self._api_home_page.get_active_employees_number(cookie).json()
+        active_employees_number = active_employees_response_data['data']['numberOfActiveEmployee']
         self._ui_home_page = UiHomePage(self._driver)
         self._ui_home_page.click_about_button()
         # ASSERT
         self.assertEqual(int(self._ui_home_page.check_active_employees()),
-                         active_employees)
+                         active_employees_number)
 
 
 if __name__ == '__main__':

@@ -15,6 +15,7 @@ class APIHomePage:
 
     CHANGE_EMPLOYEE_INFO = "v2/pim/employees/7/personal-details"
     CHANGE_ADMIN_DETAILS = "v2/pim/employee/7/contact-details"
+    CHANGE_EMPLOYEE_GENDER = "v2/pim/employees/7/personal-details"
     ADD_A_NEW_EMPLOYEE = "v2/pim/employees"
     ABOUT = "v2/core/about"
 
@@ -41,7 +42,6 @@ class APIHomePage:
                 f'{self._url}{self.CHANGE_EMPLOYEE_INFO}',
                 headers,
                 person_object.to_dict())
-            print(f'{self._url}{self.CHANGE_EMPLOYEE_INFO}')
             return response
 
         except requests.RequestException as e:
@@ -88,4 +88,18 @@ class APIHomePage:
             return response
         except requests.RequestException as e:
             logging.error(f'Get request has not been sent.: {e}')
+
+    def change_employee_gender(self, cookie, employee: PersonObject):
+        try:
+            logging.info("Sending a put request to change employee gender.")
+            headers = {
+                "Cookie": f"{cookie}"
+            }
+            response = self._request.put_request(
+                f'{self._url}{self.CHANGE_EMPLOYEE_GENDER}',
+                headers,
+                employee.to_dict())
+            return response
+        except requests.RequestException as e:
+            logging.error(f'Put request has not been sent.: {e}')
 
