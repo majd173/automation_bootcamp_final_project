@@ -7,6 +7,9 @@ from orange_hrm.infra.ui.base_page import BasePage
 
 
 class UiHomePage(BasePage):
+    """
+    This class manages the Home Page.
+    """
     MY_INFO = "a[href='/web/index.php/pim/viewMyDetails']"
     EMPLOYEE_FULL_NAME = "//p[@class='oxd-userdropdown-name']"
     USER_DETAILS_BUTTON = "span[class='oxd-userdropdown-tab']"
