@@ -290,3 +290,42 @@
 2024-08-05 12:38:42,012:INFO:Sending a post request to add a new employee.:
 2024-08-05 12:38:46,120:INFO:----------------Test Completed----------------
 :
+2024-08-05 15:51:57,469:INFO:----------------Test Started----------------:
+2024-08-05 15:52:01,332:INFO:Trying valid logging in flow process.:
+2024-08-05 15:52:03,149:INFO:Sending a get request to get :
+2024-08-05 15:52:03,663:INFO:Sending a get request to get :
+2024-08-05 15:52:04,255:INFO:----------------Test Completed----------------
+:
+2024-08-05 15:55:26,677:INFO:----------------Test Started----------------:
+2024-08-05 15:55:29,812:INFO:Trying valid logging in flow process.:
+2024-08-05 15:55:31,540:INFO:Sending a get request to get :
+2024-08-05 15:55:32,015:INFO:Sending a get request to get :
+2024-08-05 15:55:32,586:INFO:----------------Test Completed----------------
+:
+2024-08-05 15:56:32,752:INFO:----------------Test Started----------------:
+2024-08-05 15:56:35,757:INFO:Trying valid logging in flow process.:
+2024-08-05 15:56:37,422:INFO:Sending a get request to get :
+2024-08-05 16:11:36,634:INFO:----------------Test Started----------------:
+2024-08-05 16:11:39,851:INFO:Trying valid logging in flow process.:
+2024-08-05 16:11:41,566:INFO:Sending a get request to get :
+2024-08-05 16:11:42,125:INFO:Sending a get request to get :
+2024-08-05 16:11:42,753:INFO:----------------Test Completed----------------
+:
+2024-08-05 16:12:09,158:INFO:----------------Test Started----------------:
+2024-08-05 16:12:12,062:INFO:Trying valid logging in flow process.:
+2024-08-05 16:12:13,931:INFO:Sending a get request to get :
+2024-08-05 16:12:14,465:INFO:Sending a get request to get :
+2024-08-05 16:12:16,879:INFO:----------------Test Completed----------------
+:
+2024-08-05 16:16:07,169:INFO:----------------Test Started----------------:
+2024-08-05 16:16:10,258:INFO:Trying valid logging in flow process.:
+2024-08-05 16:16:11,950:INFO:Sending a get request to get :
+2024-08-05 16:16:12,577:INFO:Sending a get request to get :
+2024-08-05 16:16:14,565:INFO:----------------Test Completed----------------
+:
+2024-08-05 16:17:02,683:INFO:----------------Test Started----------------:
+2024-08-05 16:17:06,727:INFO:Trying valid logging in flow process.:
+2024-08-05 16:17:08,958:INFO:Sending a get request to get :
+2024-08-05 16:17:09,685:INFO:Sending a get request to get :
+2024-08-05 16:17:11,782:INFO:----------------Test Completed----------------
+:

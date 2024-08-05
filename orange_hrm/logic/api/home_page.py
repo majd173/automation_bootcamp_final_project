@@ -16,7 +16,7 @@ class APIHomePage:
     CHANGE_EMPLOYEE_INFO = "v2/pim/employees/7/personal-details"
     CHANGE_ADMIN_DETAILS = "v2/pim/employee/7/contact-details"
     ADD_A_NEW_EMPLOYEE = "v2/pim/employees"
-    ABOUT = "V2/core/about"
+    ABOUT = "v2/core/about"
 
     def __init__(self, request: ApiWrapper):
         try:
@@ -75,11 +75,16 @@ class APIHomePage:
         except requests.RequestException as e:
             logging.error(f'Post request has not been sent.: {e}')
 
-    def check_active_employees_number(self):
+    def get_active_employees_number(self, cookie):
         try:
             logging.info("Sending a get request to get ")
+            headers = {
+                "Cookie": f"{cookie}"
+            }
             response = self._request.get_request(
-                f'{self._url}{self.ABOUT}')
+                f'{self._url}{self.ABOUT}',
+                headers,
+                None)
             return response
         except requests.RequestException as e:
             logging.error(f'Get request has not been sent.: {e}')
