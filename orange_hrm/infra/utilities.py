@@ -1,6 +1,7 @@
 import random
 import string
 import time
+from enum import Enum
 
 
 class Utilities:
@@ -53,8 +54,8 @@ class Utilities:
             time.sleep(sleep_time)
             retries -= retries
         return False
+
     #------------------------------------------------------------------------------------------------------------
-
-
-
-
+    @staticmethod
+    def get_random_from_enum(enum: Enum):
+        return random.choice(list(enum)).value

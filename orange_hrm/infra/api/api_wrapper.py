@@ -22,9 +22,8 @@ class ApiWrapper:
         except requests.exceptions.RequestException as e:
             print(e)
 
-
-    def delete_request(self, url, data=None):
-        return requests.delete(url, json=data)
+    def delete_request(self, url, headers=None, data=None):
+        return requests.delete(url, headers=headers, json=data)
 
 
 
