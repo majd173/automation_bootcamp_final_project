@@ -70,7 +70,9 @@ class LogInPage(BasePage):
         self.insert_password()
         self.click_log_in_button()
         cookies = self._driver.get_cookies()
-        return f'orangehrm={cookies[0]['value']}'
+        return {
+            "Cookie": f'orangehrm={cookies[0]['value']}'
+        }
 
 
     def invalid_login_flow(self):

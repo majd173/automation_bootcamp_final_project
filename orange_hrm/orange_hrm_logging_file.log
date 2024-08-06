@@ -647,3 +647,77 @@
 2024-08-06 11:57:29,806:INFO:Sending a delete request to delete an employee.:
 2024-08-06 11:57:32,127:INFO:----------------Test Completed----------------
 :
+2024-08-06 18:27:19,162:INFO:----------------Test Started----------------:
+2024-08-06 18:27:24,985:INFO:Trying a valid logging in flow process.:
+2024-08-06 18:27:27,786:INFO:----------------Test Completed----------------
+:
+2024-08-06 18:28:30,647:INFO:----------------Test Started----------------:
+2024-08-06 18:28:34,238:INFO:Trying a valid logging in flow process.:
+2024-08-06 18:28:36,514:INFO:Sending a get request to get :
+2024-08-06 18:28:37,067:INFO:Sending a get request to get :
+2024-08-06 18:28:39,473:INFO:----------------Test Completed----------------
+:
+2024-08-06 18:38:53,470:INFO:----------------Test Started----------------:
+2024-08-06 18:38:57,027:INFO:Trying a valid logging in flow process.:
+2024-08-06 18:38:59,053:INFO:Sending a post request to add a new post.:
+2024-08-06 18:38:59,591:INFO:Sending a post request to add a new post.:
+2024-08-06 18:39:00,591:INFO:----------------Test Completed----------------
+:
+2024-08-06 19:08:02,818:INFO:----------------Test Started----------------:
+2024-08-06 19:08:06,395:INFO:Trying a valid logging in flow process.:
+2024-08-06 19:08:08,395:INFO:Sending a post request to add a new employee.:
+2024-08-06 19:08:08,561:INFO:----------------Test Completed----------------
+:
+2024-08-06 19:09:00,416:INFO:----------------Test Started----------------:
+2024-08-06 19:09:03,495:INFO:Trying a valid logging in flow process.:
+2024-08-06 19:09:05,698:INFO:Sending a post request to add a new employee.:
+2024-08-06 19:09:09,082:INFO:----------------Test Completed----------------
+:
+2024-08-06 19:09:17,252:INFO:----------------Test Started----------------:
+2024-08-06 19:09:20,295:INFO:Trying a valid logging in flow process.:
+2024-08-06 19:09:22,268:INFO:Sending a post request to add a new employee.:
+2024-08-06 19:09:22,385:INFO:----------------Test Completed----------------
+:
+2024-08-06 19:12:35,057:INFO:----------------Test Started----------------:
+2024-08-06 19:12:43,695:INFO:Trying a valid logging in flow process.:
+2024-08-06 19:12:46,005:INFO:Sending a post request to add a new employee.:
+2024-08-06 19:12:46,129:INFO:----------------Test Completed----------------
+:
+2024-08-06 19:13:26,952:INFO:----------------Test Started----------------:
+2024-08-06 19:13:37,164:INFO:Trying a valid logging in flow process.:
+2024-08-06 19:14:17,447:INFO:Sending a post request to add a new employee.:
+2024-08-06 19:14:31,360:INFO:----------------Test Completed----------------
+:
+2024-08-06 19:15:22,017:INFO:----------------Test Started----------------:
+2024-08-06 19:15:25,208:INFO:Trying a valid logging in flow process.:
+2024-08-06 19:15:27,382:INFO:Sending a post request to add a new employee.:
+2024-08-06 19:15:27,931:INFO:Sending a get request to search for an employee.:
+2024-08-06 19:15:28,624:INFO:----------------Test Completed----------------
+:
+2024-08-06 19:17:00,616:INFO:----------------Test Started----------------:
+2024-08-06 19:17:03,686:INFO:Trying a valid logging in flow process.:
+2024-08-06 19:17:06,009:INFO:Sending a post request to add a new employee.:
+2024-08-06 19:17:06,620:INFO:Sending a get request to search for an employee.:
+2024-08-06 19:17:07,393:INFO:----------------Test Completed----------------
+:
+2024-08-06 19:17:28,468:INFO:----------------Test Started----------------:
+2024-08-06 19:17:31,686:INFO:Trying a valid logging in flow process.:
+2024-08-06 19:17:33,815:INFO:Sending a post request to add a new employee.:
+2024-08-06 19:17:34,329:INFO:Sending a get request to search for an employee.:
+2024-08-06 19:17:35,040:INFO:----------------Test Completed----------------
+:
+2024-08-06 19:19:38,511:INFO:----------------Test Started----------------:
+2024-08-06 19:19:42,123:INFO:Trying a valid logging in flow process.:
+2024-08-06 19:19:44,067:INFO:Sending a post request to add a new employee.:
+2024-08-06 19:19:44,664:INFO:Sending a get request to search for an employee.:
+2024-08-06 19:19:45,340:INFO:Sending a get request to search for an employee.:
+2024-08-06 19:19:46,047:INFO:----------------Test Completed----------------
+:
+2024-08-06 19:43:36,911:INFO:----------------Test Started----------------:
+2024-08-06 19:43:41,054:INFO:Trying a valid logging in flow process.:
+2024-08-06 19:43:42,965:INFO:Sending a post request to add a new employee.:
+2024-08-06 19:43:43,527:INFO:Sending a get request to search for an employee.:
+2024-08-06 19:43:44,034:INFO:Sending a get request to search for an employee.:
+2024-08-06 19:43:44,588:INFO:Sending a get request to search for an employee.:
+2024-08-06 19:43:45,265:INFO:----------------Test Completed----------------
+:

@@ -1,16 +1,16 @@
 import logging
 import unittest
+from orange_hrm.infra.utilities import Utilities
 from orange_hrm.logic.config_provider import ConfigProvider
 #-----------------------------API CLASSES----------------------------
 from orange_hrm.logic.api.home_page import APIHomePage
 from orange_hrm.infra.api.api_wrapper import ApiWrapper
 #-----------------------------UI CLASSES-----------------------------
 from orange_hrm.logic.ui.log_in_page import LogInPage
-from orange_hrm.logic.ui.home_page import UiHomePage
 from orange_hrm.infra.ui.browser_wrapper import BrowserWrapper
 
 
-class TestActiveEmployeesNumber(unittest.TestCase):
+class TestAddANewPost(unittest.TestCase):
 
     def setUp(self):
         """
@@ -29,19 +29,23 @@ class TestActiveEmployeesNumber(unittest.TestCase):
         self._driver.close()
         logging.info("----------------Test Completed----------------\n")
 
-    def test_active_employees_number(self):
+    def test_add_a_new_post(self):
+        """
+        This method tests adding a new post.
+        Test case: TC-10 / Add a new post.
+        """
         # ACT
         self._login_page = LogInPage(self._driver)
         cookie = self._login_page.valid_login_flow()
+        generated_post = Utilities.generate_random_string_with_punctuation(20)
         self._api_home_page = APIHomePage(self._api)
-        self._api_home_page.get_active_employees_number(cookie)
-        active_employees_response_data = self._api_home_page.get_active_employees_number(cookie).json()
-        active_employees_number = active_employees_response_data['data']['numberOfActiveEmployee']
-        self._ui_home_page = UiHomePage(self._driver)
-        self._ui_home_page.click_about_button()
         # ASSERT
-        self.assertEqual(int(self._ui_home_page.check_active_employees()),
-                         active_employees_number)
+        self.assertTrue(self._api_home_page.add_a_new_post
+                        (cookie, generated_post).ok,
+                        "Post has not benn accepted.")
+        self.assertEqual(self._api_home_page.add_a_new_post
+                         (cookie, generated_post).status_code,
+                         200, "Status code is not 200.")
 
 
 if __name__ == '__main__':
