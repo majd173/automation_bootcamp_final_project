@@ -20,8 +20,11 @@ class APIHomePage:
     DELETE_AN_EMPLOYEE = "v2/pim/employees"
     EMPLOYEES_LIST = "v2/pim/employees"
     SEARCH_FOR_AN_EMPLOYEE = "v2/pim/employees"
+    ADMIN_DETAILS = "v2/pim/employees/7/personal-details"
+    HIRING_MANAGERS = "v2/recruitment/hiring-managers"
     ABOUT = "v2/core/about"
     ADD_A_NEW_POST = "v2/buzz/posts"
+    SHARE_A_PHOTO = "v2/buzz/posts"
 
     def __init__(self, request: ApiWrapper):
         try:
@@ -130,9 +133,6 @@ class APIHomePage:
     def delete_an_employee(self, cookie, employee_number):
         try:
             logging.info("Sending a delete request to delete an employee.")
-            # headers = {
-            #     "Cookie": f"{cookie}"
-            # }
             body = {
                 "ids": [
                     f'{employee_number}'
@@ -150,10 +150,6 @@ class APIHomePage:
     def add_a_new_post(self, cookie, post):
         try:
             logging.info("Sending a post request to add a new post.")
-            # headers = {
-            #     "Cookie": f"{cookie}"
-            # }
-
             body = {
                 "type": "text",
                 "text": post
@@ -181,4 +177,45 @@ class APIHomePage:
         except requests.RequestException as e:
             logging.error(f'Get request has not been sent.: {e}')
 
+    def share_a_photo_by_post(self, cookie, body):
+        try:
+            logging.info("Sending a post request to share a photo by post.")
+            response = self._request.post_request(
+                f'{self._url}{self.SHARE_A_PHOTO}',
+                cookie,
+                body)
+            return response
+        except requests.RequestException as e:
+            logging.error(f'Post request has not been sent.: {e}')
+
+    def get_admin_details(self, cookie):
+        try:
+            logging.info("Sending a get request to receive admin details.")
+            response = self._request.get_request(
+                f'{self._url}{self.ADMIN_DETAILS}',
+                cookie)
+            return response
+        except requests.RequestException as e:
+            logging.error(f'Get request has not been sent.: {e}')
+
+    def get_hiring_manager(self, cookie):
+        try:
+            logging.info("Sending a get request to receive hiring managers details.")
+            params = {
+                "limit": 0
+            }
+            response = self._request.get_request(
+                f'{self._url}{self.HIRING_MANAGERS}',
+                cookie,
+                params)
+            hiring_managers = response.json()['data']
+            return hiring_managers
+            # print(hiring_managers)
+            # for manager in hiring_managers:
+            #     if manager['firstName'] == admin_firstname:
+            #         return manager['firstName']
+            #     else:
+            #         return False
+        except requests.RequestException as e:
+            logging.error(f'Get request has not been sent.: {e}')
 
