@@ -39,12 +39,11 @@ class TestAddANewPost(unittest.TestCase):
         cookie = self._login_page.valid_login_flow()
         generated_post = Utilities.generate_random_string_with_punctuation(20)
         self._api_home_page = APIHomePage(self._api)
+        post_request = self._api_home_page.add_a_new_post(cookie, generated_post)
         # ASSERT
-        self.assertTrue(self._api_home_page.add_a_new_post
-                        (cookie, generated_post).ok,
+        self.assertTrue(post_request.ok,
                         "Post has not benn accepted.")
-        self.assertEqual(self._api_home_page.add_a_new_post
-                         (cookie, generated_post).status_code,
+        self.assertEqual(post_request.status_code,
                          200, "Status code is not 200.")
 
 

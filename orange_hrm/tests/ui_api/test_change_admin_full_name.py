@@ -1,19 +1,18 @@
 import logging
 import unittest
 from orange_hrm.logic.config_provider import ConfigProvider
+from orange_hrm.infra.utilities import Utilities
 #-----------------------------API CLASSES----------------------------
 from orange_hrm.logic.api.home_page import APIHomePage
 from orange_hrm.infra.api.api_wrapper import ApiWrapper
-from orange_hrm.infra.utilities import Utilities
-from orange_hrm.logic.api.entities.preson_object import PersonObject
+from orange_hrm.logic.api.entities.admin_object import AdminObject
 #-----------------------------UI CLASSES-----------------------------
 from orange_hrm.logic.ui.log_in_page import LogInPage
 from orange_hrm.logic.ui.home_page import UiHomePage
 from orange_hrm.infra.ui.browser_wrapper import BrowserWrapper
-from orange_hrm.logic.ui.my_info_page import UiMyInfoPage
 
 
-class TestChangeEmployeeGender(unittest.TestCase):
+class TestChangeAdminFullName(unittest.TestCase):
 
     def setUp(self):
         """
@@ -32,24 +31,24 @@ class TestChangeEmployeeGender(unittest.TestCase):
         self._driver.close()
         logging.info("----------------Test Completed----------------\n")
 
-    def test_change_employee_gender(self):
+    def test_change_admin_fullname(self):
         """
-        This method tests change employee gender.
-        Test case: TC-08 / Change employee's gender.
+        This method tests changing admin full name - UI & API.
+        Test case: TC-04 / Change admin full name.
         """
         # ACT
         self._login_page = LogInPage(self._driver)
-        self._cookie = self._login_page.valid_login_flow()
+        cookie = self._login_page.valid_login_flow()
         self._api_home_page = APIHomePage(self._api)
-        employee = PersonObject(Utilities.generate_random_string_only_letters(5),
-                                Utilities.generate_random_string_only_letters(5),
-                                Utilities.generate_random_string_only_letters(5))
-        self._api_home_page.change_employee_gender(self._cookie, employee)
-        self._ui_home_page = UiHomePage(self._driver)
-        self._ui_home_page.click_my_info_button()
-        self._ui_my_info_page = UiMyInfoPage(self._driver)
+        admin_object = AdminObject(Utilities.generate_random_string_only_letters(5).lower(),
+                                   Utilities.generate_random_string_only_letters(5).lower(),
+                                   Utilities.generate_random_string_only_letters(5).lower())
+        self._api_home_page.change_admin_full_name(cookie, admin_object)
+        home_page = UiHomePage(self._driver)
+        home_page.refresh_page()
         # ASSERT
-        self.assertTrue(self._ui_my_info_page.check_gender_button_if_enabled(employee))
+        self.assertEqual(home_page.get_admin_full_name()[0], admin_object.first_name)
+        self.assertEqual(home_page.get_admin_full_name()[1], admin_object.last_name)
 
 
 if __name__ == '__main__':

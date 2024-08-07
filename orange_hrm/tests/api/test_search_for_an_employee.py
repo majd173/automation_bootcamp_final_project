@@ -44,16 +44,13 @@ class TestSearchForAnEmployee(unittest.TestCase):
                                   Utilities.generate_random_string_only_letters(7))
         self._api_home_page = APIHomePage(self._api)
         self._api_home_page.add_a_new_employee(cookie, employee)
-        received_employee_firstname = (self._api_home_page.search_for_an_employee
-        (cookie, employee.firstname).json()['data'][0]['firstName'])
+        added_employee_response = self._api_home_page.search_for_an_employee(cookie, employee.firstname)
         # ASSERT
-        self.assertTrue(self._api_home_page.search_for_an_employee
-                        (cookie, employee.firstname).ok,
+        self.assertTrue(added_employee_response.ok,
                         "Request has not been accepted.")
-        self.assertEqual(self._api_home_page.search_for_an_employee
-                         (cookie, employee.firstname).status_code, 200,
+        self.assertEqual(added_employee_response.status_code, 200,
                          "Status code is not 200.")
-        self.assertEqual(received_employee_firstname, employee.firstname,
+        self.assertEqual(added_employee_response.json()['data'][0]['firstName'], employee.firstname,
                          "Received employee firstname is not correct.")
 
 

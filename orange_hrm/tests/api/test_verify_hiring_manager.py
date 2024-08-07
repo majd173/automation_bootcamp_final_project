@@ -5,7 +5,7 @@ from orange_hrm.logic.config_provider import ConfigProvider
 #-----------------------------API CLASSES----------------------------
 from orange_hrm.logic.api.home_page import APIHomePage
 from orange_hrm.infra.api.api_wrapper import ApiWrapper
-from orange_hrm.logic.api.entities.employee_object import EmployeeObject
+from orange_hrm.logic.api.entities.admin_object import AdminObject
 #-----------------------------UI CLASSES-----------------------------
 from orange_hrm.logic.ui.log_in_page import LogInPage
 from orange_hrm.infra.ui.browser_wrapper import BrowserWrapper
@@ -39,12 +39,12 @@ class TestVerifyHiringManager(unittest.TestCase):
         self._login_page = LogInPage(self._driver)
         cookie = self._login_page.valid_login_flow()
         self._api_home_page = APIHomePage(self._api)
-        self._api_home_page.get_admin_details(cookie)
-        admin_firstname = self._api_home_page.get_admin_details(
-            cookie).json()['data']['firstName']
-        print(admin_firstname)
+        admin_object = AdminObject(Utilities.generate_random_string_only_letters(7),
+                                   Utilities.generate_random_string_only_letters(7),
+                                   Utilities.generate_random_string_only_letters(7))
+        self._api_home_page.change_admin_full_name(cookie, admin_object)
         # ASSERT
-        self.assertIn(admin_firstname, self._api_home_page.get_hiring_manager(cookie))
+        self.assertEqual(admin_object.first_name, self._api_home_page.get_hiring_managers(cookie))
 
 
 if __name__ == '__main__':

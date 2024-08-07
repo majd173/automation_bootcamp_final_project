@@ -1,99 +1,81 @@
-2024-08-06 23:01:12,911:INFO:----------------Test Started----------------:
-2024-08-06 23:01:18,298:INFO:Trying a valid logging in flow process.:
-2024-08-06 23:01:20,036:INFO:Sending a post request to share a photo by post.:
-2024-08-06 23:01:31,851:INFO:----------------Test Completed----------------
+2024-08-07 14:21:25,920:INFO:----------------Test Started----------------:
+2024-08-07 14:21:29,425:INFO:Trying a valid logging in flow process.:
+2024-08-07 14:21:31,565:INFO:Sending a get request to get active employees number.:
+2024-08-07 14:21:33,096:INFO:----------------Test Completed----------------
 :
-2024-08-06 23:02:28,480:INFO:----------------Test Started----------------:
-2024-08-06 23:02:32,082:INFO:Trying a valid logging in flow process.:
-2024-08-06 23:02:33,695:INFO:Sending a post request to share a photo by post.:
-2024-08-06 23:02:36,290:INFO:----------------Test Completed----------------
+2024-08-07 14:21:35,185:INFO:----------------Test Started----------------:
+2024-08-07 14:21:38,577:INFO:Trying a valid logging in flow process.:
+2024-08-07 14:21:40,651:INFO:Sending a post request to add a new employee.:
+2024-08-07 14:21:43,623:INFO:----------------Test Completed----------------
 :
-2024-08-06 23:02:57,685:INFO:----------------Test Started----------------:
-2024-08-06 23:03:01,185:INFO:Trying a valid logging in flow process.:
-2024-08-06 23:03:02,842:INFO:Sending a post request to share a photo by post.:
-2024-08-06 23:03:05,541:INFO:----------------Test Completed----------------
+2024-08-07 14:21:43,624:INFO:----------------Test Started----------------:
+2024-08-07 14:21:46,877:INFO:Trying a valid logging in flow process.:
+2024-08-07 14:21:48,851:INFO:Sending a put request to change admin city and mobile number.:
+2024-08-07 14:21:53,006:INFO:----------------Test Completed----------------
 :
-2024-08-06 23:40:23,037:INFO:----------------Test Started----------------:
-2024-08-06 23:40:32,684:INFO:Trying a valid logging in flow process.:
-2024-08-06 23:40:34,703:INFO:Sending a get request to receive admin details.:
-2024-08-06 23:40:35,258:INFO:Sending a get request to receive admin details.:
-2024-08-06 23:40:35,786:INFO:Sending a get request to receive hiring managers details.:
-2024-08-06 23:40:36,521:INFO:----------------Test Completed----------------
+2024-08-07 14:21:55,109:INFO:----------------Test Started----------------:
+2024-08-07 14:21:58,246:INFO:Trying a valid logging in flow process.:
+2024-08-07 14:22:00,035:INFO:Sending a put request to change admin full name.:
+2024-08-07 14:22:02,056:INFO:----------------Test Completed----------------
 :
-2024-08-06 23:43:28,756:INFO:----------------Test Started----------------:
-2024-08-06 23:43:39,891:INFO:Trying a valid logging in flow process.:
-2024-08-06 23:43:41,834:INFO:Sending a get request to receive admin details.:
-2024-08-06 23:43:42,388:INFO:Sending a get request to receive admin details.:
-2024-08-06 23:43:42,915:INFO:Sending a get request to receive hiring managers details.:
-2024-08-06 23:43:43,579:INFO:----------------Test Completed----------------
+2024-08-07 14:22:04,137:INFO:----------------Test Started----------------:
+2024-08-07 14:22:07,350:INFO:Trying a valid logging in flow process.:
+2024-08-07 14:22:09,335:INFO:Sending a put request to change admin gender.:
+2024-08-07 14:22:12,590:INFO:----------------Test Completed----------------
 :
-2024-08-06 23:47:10,234:INFO:----------------Test Started----------------:
-2024-08-06 23:47:20,013:INFO:Trying a valid logging in flow process.:
-2024-08-06 23:47:21,805:INFO:Sending a get request to receive admin details.:
-2024-08-06 23:47:22,313:INFO:Sending a get request to receive admin details.:
-2024-08-06 23:47:22,920:INFO:Sending a get request to receive hiring managers details.:
-2024-08-06 23:47:23,548:INFO:----------------Test Completed----------------
+2024-08-07 14:22:14,678:INFO:----------------Test Started----------------:
+2024-08-07 14:22:17,802:INFO:Trying a valid logging in flow process.:
+2024-08-07 14:22:19,574:INFO:Sending a post request to add a new employee.:
+2024-08-07 14:22:20,057:INFO:Sending a get request to receive an employee by id.:
+2024-08-07 14:22:20,752:INFO:Sending a delete request to delete an employee.:
+2024-08-07 14:22:22,163:INFO:----------------Test Completed----------------
 :
-2024-08-06 23:53:30,957:INFO:----------------Test Started----------------:
-2024-08-06 23:53:40,786:INFO:Trying a valid logging in flow process.:
-2024-08-06 23:53:42,625:INFO:Sending a get request to receive admin details.:
-2024-08-06 23:53:43,515:INFO:Sending a get request to receive admin details.:
-2024-08-06 23:53:44,175:INFO:Sending a get request to receive hiring managers details.:
-2024-08-06 23:53:44,875:INFO:----------------Test Completed----------------
+2024-08-07 14:22:22,164:INFO:----------------Test Started----------------:
+2024-08-07 14:22:25,359:INFO:Trying a valid logging in flow process.:
+2024-08-07 14:22:27,084:INFO:Sending a post request to share a photo by post.:
+2024-08-07 14:22:29,905:INFO:----------------Test Completed----------------
 :
-2024-08-07 00:00:50,319:INFO:----------------Test Started----------------:
-2024-08-07 00:00:57,496:INFO:Trying a valid logging in flow process.:
-2024-08-07 00:00:59,382:INFO:Sending a get request to receive admin details.:
-2024-08-07 00:01:01,013:INFO:Sending a get request to receive admin details.:
-2024-08-07 00:01:01,485:INFO:Sending a get request to receive hiring managers details.:
-2024-08-07 00:01:02,190:INFO:----------------Test Completed----------------
+2024-08-07 14:24:34,459:INFO:----------------Test Started----------------:
+2024-08-07 14:24:37,712:INFO:Trying a valid logging in flow process.:
+2024-08-07 14:24:39,570:INFO:Sending a post request to add a new employee.:
+2024-08-07 14:24:42,371:INFO:----------------Test Completed----------------
 :
-2024-08-07 00:01:44,092:INFO:----------------Test Started----------------:
-2024-08-07 00:01:51,494:INFO:Trying a valid logging in flow process.:
-2024-08-07 00:01:53,430:INFO:Sending a get request to receive admin details.:
-2024-08-07 00:01:53,984:INFO:Sending a get request to receive admin details.:
-2024-08-07 00:01:54,607:INFO:Sending a get request to receive hiring managers details.:
-2024-08-07 00:01:55,307:INFO:----------------Test Completed----------------
+2024-08-07 14:24:48,241:INFO:----------------Test Started----------------:
+2024-08-07 14:24:51,398:INFO:Trying a valid logging in flow process.:
+2024-08-07 14:24:53,183:INFO:Sending a post request to add a new employee.:
+2024-08-07 14:24:53,704:INFO:Sending a get request to receive an employee by id.:
+2024-08-07 14:24:54,440:INFO:Sending a delete request to delete an employee.:
+2024-08-07 14:24:57,185:INFO:----------------Test Completed----------------
 :
-2024-08-07 00:02:48,979:INFO:----------------Test Started----------------:
-2024-08-07 00:02:56,068:INFO:Trying a valid logging in flow process.:
-2024-08-07 00:02:57,974:INFO:Sending a get request to receive admin details.:
-2024-08-07 00:02:58,515:INFO:Sending a get request to receive admin details.:
-2024-08-07 00:02:59,110:INFO:Sending a get request to receive hiring managers details.:
-2024-08-07 00:02:59,931:INFO:----------------Test Completed----------------
+2024-08-07 14:25:10,452:INFO:----------------Test Started----------------:
+2024-08-07 14:25:13,804:INFO:Trying an invalid logging in flow process.:
+2024-08-07 14:25:15,873:INFO:Invalid login message is displayed.:
+2024-08-07 14:25:16,004:INFO:----------------Test Completed----------------
 :
-2024-08-07 00:04:32,221:INFO:----------------Test Started----------------:
-2024-08-07 00:04:38,645:INFO:Trying a valid logging in flow process.:
-2024-08-07 00:04:40,685:INFO:Sending a get request to receive admin details.:
-2024-08-07 00:04:41,763:INFO:Sending a get request to receive admin details.:
-2024-08-07 00:04:42,271:INFO:Sending a get request to receive hiring managers details.:
-2024-08-07 00:04:42,938:INFO:----------------Test Completed----------------
+2024-08-07 14:25:18,102:INFO:----------------Test Started----------------:
+2024-08-07 14:25:21,256:INFO:Trying a valid logging in flow process.:
+2024-08-07 14:25:24,927:INFO:Trying valid logging out flow process, by checking visibility of login button after submitting a logout.:
+2024-08-07 14:25:25,522:INFO:Login button is displayed.:
+2024-08-07 14:25:25,665:INFO:----------------Test Completed----------------
 :
-2024-08-07 00:08:07,060:INFO:----------------Test Started----------------:
-2024-08-07 00:08:18,393:INFO:Trying a valid logging in flow process.:
-2024-08-07 00:08:21,073:INFO:Sending a get request to receive admin details.:
-2024-08-07 00:08:21,619:INFO:Sending a get request to receive admin details.:
-2024-08-07 00:08:22,315:INFO:Sending a get request to receive hiring managers details.:
-2024-08-07 00:08:22,947:INFO:----------------Test Completed----------------
+2024-08-07 14:25:27,738:INFO:----------------Test Started----------------:
+2024-08-07 14:25:30,966:INFO:Trying a valid logging in flow process.:
+2024-08-07 14:25:33,539:INFO:----------------Test Completed----------------
 :
-2024-08-07 00:08:44,005:INFO:----------------Test Started----------------:
-2024-08-07 00:08:49,548:INFO:Trying a valid logging in flow process.:
-2024-08-07 00:08:51,756:INFO:Sending a get request to receive admin details.:
-2024-08-07 00:08:52,421:INFO:Sending a get request to receive admin details.:
-2024-08-07 00:08:53,365:INFO:Sending a get request to receive hiring managers details.:
-2024-08-07 00:08:54,285:INFO:----------------Test Completed----------------
+2024-08-07 14:25:48,952:INFO:----------------Test Started----------------:
+2024-08-07 14:25:52,101:INFO:Trying a valid logging in flow process.:
+2024-08-07 14:25:53,839:INFO:Sending a post request to add a new post.:
+2024-08-07 14:25:54,503:INFO:----------------Test Completed----------------
 :
-2024-08-07 00:11:24,464:INFO:----------------Test Started----------------:
-2024-08-07 00:11:30,433:INFO:Trying a valid logging in flow process.:
-2024-08-07 00:11:32,320:INFO:Sending a get request to receive admin details.:
-2024-08-07 00:11:33,037:INFO:Sending a get request to receive admin details.:
-2024-08-07 00:11:33,623:INFO:Sending a get request to receive hiring managers details.:
-2024-08-07 00:11:34,337:INFO:----------------Test Completed----------------
+2024-08-07 14:25:56,595:INFO:----------------Test Started----------------:
+2024-08-07 14:25:59,699:INFO:Trying a valid logging in flow process.:
+2024-08-07 14:26:01,643:INFO:Sending a post request to add a new employee.:
+2024-08-07 14:26:02,189:INFO:Sending a get request to search for an employee.:
+2024-08-07 14:26:02,832:INFO:----------------Test Completed----------------
 :
-2024-08-07 00:16:25,400:INFO:----------------Test Started----------------:
-2024-08-07 00:16:32,008:INFO:Trying a valid logging in flow process.:
-2024-08-07 00:16:33,942:INFO:Sending a get request to receive admin details.:
-2024-08-07 00:16:34,973:INFO:Sending a get request to receive admin details.:
-2024-08-07 00:16:35,450:INFO:Sending a get request to receive hiring managers details.:
-2024-08-07 00:16:36,897:INFO:----------------Test Completed----------------
+2024-08-07 14:26:04,902:INFO:----------------Test Started----------------:
+2024-08-07 14:26:08,240:INFO:Trying a valid logging in flow process.:
+2024-08-07 14:26:10,162:INFO:Sending a put request to change admin full name.:
+2024-08-07 14:26:10,695:INFO:Sending a get request to receive hiring manager first name.:
+2024-08-07 14:26:11,441:INFO:----------------Test Completed----------------
 :

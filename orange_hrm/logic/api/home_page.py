@@ -5,26 +5,27 @@ from orange_hrm.logic.config_provider import ConfigProvider
 from orange_hrm.infra.api.api_wrapper import ApiWrapper
 from orange_hrm.logic.api.entities.admin_contact_details import AdminContactDetails
 from orange_hrm.logic.api.entities.employee_object import EmployeeObject
-from orange_hrm.logic.api.entities.preson_object import PersonObject
+from orange_hrm.logic.api.entities.admin_object import AdminObject
 
 
 class APIHomePage:
     """
-    API class for My Info page.
+    This class manages API requests for the website.
+    It is called home page because it includes all website requests.
     """
 
-    CHANGE_EMPLOYEE_INFO = "v2/pim/employees/7/personal-details"
-    CHANGE_ADMIN_DETAILS = "v2/pim/employee/7/contact-details"
-    CHANGE_EMPLOYEE_GENDER = "v2/pim/employees/7/personal-details"
-    ADD_A_NEW_EMPLOYEE = "v2/pim/employees"
-    DELETE_AN_EMPLOYEE = "v2/pim/employees"
-    EMPLOYEES_LIST = "v2/pim/employees"
-    SEARCH_FOR_AN_EMPLOYEE = "v2/pim/employees"
-    ADMIN_DETAILS = "v2/pim/employees/7/personal-details"
-    HIRING_MANAGERS = "v2/recruitment/hiring-managers"
-    ABOUT = "v2/core/about"
-    ADD_A_NEW_POST = "v2/buzz/posts"
-    SHARE_A_PHOTO = "v2/buzz/posts"
+    CHANGE_EMPLOYEE_INFO = "pim/employees/7/personal-details"
+    CHANGE_ADMIN_DETAILS = "pim/employee/7/contact-details"
+    CHANGE_EMPLOYEE_GENDER = "pim/employees/7/personal-details"
+    ADD_A_NEW_EMPLOYEE = "pim/employees"
+    DELETE_AN_EMPLOYEE = "pim/employees"
+    EMPLOYEES_LIST = "pim/employees"
+    SEARCH_FOR_AN_EMPLOYEE = "pim/employees"
+    ADMIN_DETAILS = "pim/employees/7/personal-details"
+    HIRING_MANAGERS = "recruitment/hiring-managers"
+    ABOUT = "core/about"
+    ADD_A_NEW_POST = "buzz/posts"
+    SHARE_A_PHOTO = "buzz/posts"
 
     def __init__(self, request: ApiWrapper):
         try:
@@ -35,30 +36,28 @@ class APIHomePage:
         except ImportError:
             logging.error("Can not open orange_hrm.json file.")
 
-    def change_employee_full_name(self, cookie, person_object: PersonObject):
+    def change_admin_full_name(self, cookie, admin_object: AdminObject):
         """
-        This function is used to change employee full name.
+        This method is used to change employee full name.
+        :return: response
         """
         try:
-            logging.info("Sending a put request to change employee full name.")
-            # headers = {
-            #     "Cookie": f'{cookie}'
-            # }
+            logging.info("Sending a put request to change admin full name.")
             response = self._request.put_request(
                 f'{self._url}{self.CHANGE_EMPLOYEE_INFO}',
                 cookie,
-                person_object.to_dict())
+                admin_object.to_dict())
             return response
-
         except requests.RequestException as e:
             logging.error(f'Put request has not been sent.: {e}')
 
     def change_admin_city_and_mobile(self, cookie, admin: AdminContactDetails):
+        """
+        This method is used to change admin city and mobile number.
+        :return: response
+        """
         try:
             logging.info("Sending a put request to change admin city and mobile number.")
-            # headers = {
-            #     "Cookie": f"{cookie}"
-            # }
             response = self._request.put_request(
                 f'{self._url}{self.CHANGE_ADMIN_DETAILS}',
                 cookie,
@@ -68,11 +67,12 @@ class APIHomePage:
             logging.error(f'Put request has not been sent.: {e}')
 
     def add_a_new_employee(self, cookie, employee: EmployeeObject):
+        """
+        This method is used to add a new employee.
+        :return: response
+        """
         try:
             logging.info("Sending a post request to add a new employee.")
-            # headers = {
-            #     "Cookie": f"{cookie}"
-            # }
             response = self._request.post_request(
                 f'{self._url}{self.ADD_A_NEW_EMPLOYEE}',
                 cookie,
@@ -82,11 +82,12 @@ class APIHomePage:
             logging.error(f'Post request has not been sent.: {e}')
 
     def get_active_employees_number(self, cookie):
+        """
+        This method is used to get active employees number.
+        :return: response
+        """
         try:
-            logging.info("Sending a get request to get ")
-            # headers = {
-            #     "Cookie": f"{cookie}"
-            # }
+            logging.info("Sending a get request to get active employees number.")
             response = self._request.get_request(
                 f'{self._url}{self.ABOUT}',
                 cookie,
@@ -95,42 +96,48 @@ class APIHomePage:
         except requests.RequestException as e:
             logging.error(f'Get request has not been sent.: {e}')
 
-    def change_employee_gender(self, cookie, employee: PersonObject):
+    def change_admin_gender(self, cookie, admin_object: AdminObject):
+        """
+        This method is used to change admin gender.
+        :return: response
+        """
         try:
-            logging.info("Sending a put request to change employee gender.")
-            # headers = {
-            #     "Cookie": f"{cookie}"
-            # }
+            logging.info("Sending a put request to change admin gender.")
             response = self._request.put_request(
                 f'{self._url}{self.CHANGE_EMPLOYEE_GENDER}',
                 cookie,
-                employee.to_dict())
+                admin_object.to_dict())
             return response
         except requests.RequestException as e:
             logging.error(f'Put request has not been sent.: {e}')
 
     def receive_an_employee_by_id(self, cookie, id):
+        """
+        This method is used to receive an employee by id.
+        :return: employee number
+        """
         try:
             logging.info("Sending a get request to receive an employee by id.")
-            # headers = {
-            #     "Cookie": f"{cookie}"
-            # }
             get_employees_response = self._request.get_request(
                 f'{self._url}{self.EMPLOYEES_LIST}',
                 cookie,
                 None)
-            get_employees_response_data = get_employees_response.json()
-            list_of_employees = get_employees_response_data['data']
+            list_of_employees = get_employees_response.json()['data']
             for employee in list_of_employees:
                 if employee['employeeId'] == id:
                     return employee['empNumber']
             else:
                 logging.error(f'Employee with {id} not found.')
+                return None
         except requests.RequestException as e:
             logging.error(f'Get request has not been sent.: {e}')
-
+            return None
 
     def delete_an_employee(self, cookie, employee_number):
+        """
+        This method is used to delete an employee by employee number.
+        :return: response
+        """
         try:
             logging.info("Sending a delete request to delete an employee.")
             body = {
@@ -146,8 +153,11 @@ class APIHomePage:
         except requests.RequestException as e:
             logging.error(f'Delete request has not been sent.: {e}')
 
-
     def add_a_new_post(self, cookie, post):
+        """
+        This method is used to add a new post.
+        :return: response
+        """
         try:
             logging.info("Sending a post request to add a new post.")
             body = {
@@ -163,6 +173,10 @@ class APIHomePage:
             logging.error(f'Post request has not been sent.: {e}')
 
     def search_for_an_employee(self, cookie, firstname):
+        """
+        This method is used to search for an employee by firstname.
+        :return: response
+        """
         try:
             logging.info("Sending a get request to search for an employee.")
             params = {
@@ -178,6 +192,10 @@ class APIHomePage:
             logging.error(f'Get request has not been sent.: {e}')
 
     def share_a_photo_by_post(self, cookie, body):
+        """
+        This method is used to share a photo by post.
+        :return: response
+        """
         try:
             logging.info("Sending a post request to share a photo by post.")
             response = self._request.post_request(
@@ -188,19 +206,13 @@ class APIHomePage:
         except requests.RequestException as e:
             logging.error(f'Post request has not been sent.: {e}')
 
-    def get_admin_details(self, cookie):
+    def get_hiring_managers(self, cookie):
+        """
+        This method is used to get hiring manager first name.
+        :return: hiring manager firstname.
+        """
         try:
-            logging.info("Sending a get request to receive admin details.")
-            response = self._request.get_request(
-                f'{self._url}{self.ADMIN_DETAILS}',
-                cookie)
-            return response
-        except requests.RequestException as e:
-            logging.error(f'Get request has not been sent.: {e}')
-
-    def get_hiring_manager(self, cookie):
-        try:
-            logging.info("Sending a get request to receive hiring managers details.")
+            logging.info("Sending a get request to receive hiring manager first name.")
             params = {
                 "limit": 0
             }
@@ -208,14 +220,7 @@ class APIHomePage:
                 f'{self._url}{self.HIRING_MANAGERS}',
                 cookie,
                 params)
-            hiring_managers = response.json()['data']
-            return hiring_managers
-            # print(hiring_managers)
-            # for manager in hiring_managers:
-            #     if manager['firstName'] == admin_firstname:
-            #         return manager['firstName']
-            #     else:
-            #         return False
+            return response.json()['data'][0]['firstName']
         except requests.RequestException as e:
             logging.error(f'Get request has not been sent.: {e}')
 

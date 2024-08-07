@@ -7,6 +7,9 @@ from orange_hrm.infra.ui.base_page import BasePage
 
 
 class UiBuzzPage(BasePage):
+    """
+    This class manages UI of Buzz page.
+    """
     PHOTO = "div[class='orangehrm-buzz-post-body-picture']"
 
     def __init__(self, driver):
@@ -14,6 +17,10 @@ class UiBuzzPage(BasePage):
         self._wait = WebDriverWait(self._driver, 10)
 
     def check_image_displayed_in_post(self):
+        """
+        This method checks if image is displayed in post.
+        :return: bool
+        """
         try:
             image = (self._wait.until
                      (EC.visibility_of_element_located
@@ -24,3 +31,4 @@ class UiBuzzPage(BasePage):
                 return False
         except NoSuchElementException:
             logging.error("Element can not be found.")
+            return False

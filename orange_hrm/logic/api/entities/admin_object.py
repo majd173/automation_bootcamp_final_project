@@ -2,9 +2,9 @@ from orange_hrm.infra.utilities import Utilities
 from orange_hrm.logic.api.enums.gender import Gender
 
 
-class PersonObject:
+class AdminObject:
     """
-    This class manages person object creation.
+    This class manages admin object details.
     """
 
     def __init__(self, first_name, middle_name, last_name):
@@ -44,17 +44,10 @@ class PersonObject:
     def last_name(self, value):
         self._last_name = value
 
-    # @property
-    # def gender(self):
-    #     return self._gender
-    #
-    # @gender.setter
-    # def gender(self, value):
-    #     self._gender = value
 
     def to_dict(self):
         """
-        This method returns person object in dictionary format.
+        This method returns admin object details in dictionary format.
         """
         return {
             "lastName": self._last_name,

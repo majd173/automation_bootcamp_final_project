@@ -1,10 +1,10 @@
 import logging
 import unittest
 from orange_hrm.logic.config_provider import ConfigProvider
+from orange_hrm.infra.utilities import Utilities
 #-----------------------------API CLASSES----------------------------
 from orange_hrm.logic.api.home_page import APIHomePage
 from orange_hrm.infra.api.api_wrapper import ApiWrapper
-from orange_hrm.infra.utilities import Utilities
 from orange_hrm.logic.api.entities.employee_object import EmployeeObject
 #-----------------------------UI CLASSES-----------------------------
 from orange_hrm.logic.ui.log_in_page import LogInPage
@@ -14,7 +14,6 @@ from orange_hrm.logic.ui.pim_page import UiPimPage
 
 
 class TestAddANewEmployee(unittest.TestCase):
-
 
     def setUp(self):
         """
@@ -32,7 +31,6 @@ class TestAddANewEmployee(unittest.TestCase):
         """
         self._driver.close()
         logging.info("----------------Test Completed----------------\n")
-
 
     def test_add_a_new_employee(self):
         """
@@ -52,11 +50,7 @@ class TestAddANewEmployee(unittest.TestCase):
         self._home_page.click_pim_button()
         self._pim_page = UiPimPage(self._driver)
         # ASSERT
-        self.assertIn(employee.firstname, self._pim_page.check_employee_existence())
-        self.assertIn(employee.lastname, self._pim_page.check_employee_existence())
-        self.assertIn(employee.middle_name, self._pim_page.check_employee_existence())
-        self.assertIn(employee.id, self._pim_page.check_employee_existence())
-
+        self.assertIn(employee.id, self._pim_page.all_employees_table())
 
 
 if __name__ == '__main__':

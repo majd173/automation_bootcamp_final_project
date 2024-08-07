@@ -30,18 +30,21 @@ class TestActiveEmployeesNumber(unittest.TestCase):
         logging.info("----------------Test Completed----------------\n")
 
     def test_active_employees_number(self):
+        """
+        This method tests active employees number.
+        Test case: TC-07 / Check active employees number.
+        """
         # ACT
         self._login_page = LogInPage(self._driver)
         cookie = self._login_page.valid_login_flow()
         self._api_home_page = APIHomePage(self._api)
-        self._api_home_page.get_active_employees_number(cookie)
-        active_employees_response_data = self._api_home_page.get_active_employees_number(cookie).json()
-        active_employees_number = active_employees_response_data['data']['numberOfActiveEmployee']
+        active_employees_number = self._api_home_page.get_active_employees_number(
+                             cookie).json()['data']['numberOfActiveEmployee']
         self._ui_home_page = UiHomePage(self._driver)
         self._ui_home_page.click_about_button()
         # ASSERT
         self.assertEqual(int(self._ui_home_page.check_active_employees()),
-                         active_employees_number)
+                         active_employees_number, "Incorrect active employees number.")
 
 
 if __name__ == '__main__':

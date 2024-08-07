@@ -1,5 +1,5 @@
 {
-  "api_base_url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/",
+  "api_base_url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/",
   "browser" : "Chrome",
 
   "login_url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",

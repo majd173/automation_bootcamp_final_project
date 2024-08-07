@@ -8,7 +8,7 @@ from orange_hrm.infra.ui.base_page import BasePage
 
 class UiHomePage(BasePage):
     """
-    This class manages the Home Page.
+    This class manages UI of Home Page.
     """
     MY_INFO = "a[href='/web/index.php/pim/viewMyDetails']"
     EMPLOYEE_FULL_NAME = "//p[@class='oxd-userdropdown-name']"
@@ -24,18 +24,32 @@ class UiHomePage(BasePage):
         self._wait = WebDriverWait(self._driver, 10)
 
     def get_admin_full_name(self):
+        """
+        This method gets admin full name.
+        :return: admin full name.
+        """
         try:
-            employee_full_name = (self._wait.until
+            admin_full_name = (self._wait.until
                                   (EC.visibility_of_element_located
                                    ((By.XPATH, self.EMPLOYEE_FULL_NAME))))
-            return employee_full_name.text.split(" ")
+            return admin_full_name.text.split(" ")
         except NoSuchElementException:
             logging.error("Element can not be found.")
+            return None
 
     def refresh_page(self):
-        self._driver.refresh()
+        """
+        This method refreshes page.
+        """
+        try:
+            self._driver.refresh()
+        except Exception as e:
+            logging.error(f'Can not refresh page. {e}')
 
     def click_user_details_button(self):
+        """
+        This method clicks on user details button.
+        """
         try:
             user_details_button = (self._wait.until
                                    (EC.element_to_be_clickable
@@ -45,6 +59,9 @@ class UiHomePage(BasePage):
             logging.error("Element can not be found.")
 
     def click_logout_button(self):
+        """
+        This method clicks on logout button.
+        """
         try:
             self.click_user_details_button()
             logout_button = (self._wait.until
@@ -55,6 +72,9 @@ class UiHomePage(BasePage):
             logging.error("Element can not be found.")
 
     def check_user_details_button_displayed(self):
+        """
+        This method checks if user details button is displayed.
+        """
         try:
             user_details_button = (self._wait.until
                                    (EC.element_to_be_clickable
@@ -65,8 +85,12 @@ class UiHomePage(BasePage):
                 return False
         except NoSuchElementException:
             logging.error("Element can not be found.")
+            return False
 
     def click_my_info_button(self):
+        """
+        This method clicks on my info button.
+        """
         try:
             my_info_button = (self._wait.until
                               (EC.element_to_be_clickable
@@ -75,7 +99,10 @@ class UiHomePage(BasePage):
         except NoSuchElementException:
             logging.error("Element can not be found.")
 
-    def click_pim_button(self):
+    def click_pim_button(self): # pim = personal information management
+        """
+        This method clicks on pim (personal information management) button.
+        """
         try:
             pim_button = (self._wait.until
                           (EC.element_to_be_clickable
@@ -85,6 +112,10 @@ class UiHomePage(BasePage):
             logging.error("Element can not be found.")
 
     def click_about_button(self):
+        """
+        This method clicks on about button.
+        :return:
+        """
         self.click_user_details_button()
         try:
             about_button = (self._wait.until
@@ -95,12 +126,26 @@ class UiHomePage(BasePage):
             logging.error("Element can not be found.")
 
     def check_active_employees(self):
-        active_employees = (self._wait.until
-                            (EC.visibility_of_element_located
-                             ((By.XPATH, self.ACTIVE_EMPLOYEES))))
-        return active_employees.text
+        """
+        This method returns number of active employees.
+        :return: active employees number.
+        """
+        try:
+            active_employees = (self._wait.until
+                                (EC.visibility_of_element_located
+                                 ((By.XPATH, self.ACTIVE_EMPLOYEES))))
+            if active_employees.is_displayed():
+                return active_employees.text
+            else:
+                return None
+        except NoSuchElementException:
+            logging.error("Element can not be found.")
+            return None
 
     def click_buzz_button(self):
+        """
+        This method clicks on buzz button.
+        """
         try:
             buzz_button = (self._wait.until
                            (EC.element_to_be_clickable
