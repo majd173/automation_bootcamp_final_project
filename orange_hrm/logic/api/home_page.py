@@ -114,10 +114,10 @@ class APIHomePage:
     def receive_an_employee_by_id(self, cookie, id):
         """
         This method is used to receive an employee by id.
-        :return: employee number
+        :return: employee number.
         """
         try:
-            logging.info("Sending a get request to receive an employee by id.")
+            logging.info("Sending a get request to receive an employee number by his/her id.")
             get_employees_response = self._request.get_request(
                 f'{self._url}{self.EMPLOYEES_LIST}',
                 cookie,
@@ -223,4 +223,3 @@ class APIHomePage:
             return response.json()['data'][0]['firstName']
         except requests.RequestException as e:
             logging.error(f'Get request has not been sent.: {e}')
-

@@ -1,81 +1,31 @@
-2024-08-07 14:21:25,920:INFO:----------------Test Started----------------:
-2024-08-07 14:21:29,425:INFO:Trying a valid logging in flow process.:
-2024-08-07 14:21:31,565:INFO:Sending a get request to get active employees number.:
-2024-08-07 14:21:33,096:INFO:----------------Test Completed----------------
+2024-08-08 00:11:52,033:INFO:----------------Test Started----------------:
+2024-08-08 00:11:54,949:INFO:-------------Testing Add A New Job------------:
+2024-08-08 00:11:54,952:INFO:Trying a valid logging in flow process.:
+2024-08-08 00:12:05,916:INFO:----------------Test Completed----------------
 :
-2024-08-07 14:21:35,185:INFO:----------------Test Started----------------:
-2024-08-07 14:21:38,577:INFO:Trying a valid logging in flow process.:
-2024-08-07 14:21:40,651:INFO:Sending a post request to add a new employee.:
-2024-08-07 14:21:43,623:INFO:----------------Test Completed----------------
-:
-2024-08-07 14:21:43,624:INFO:----------------Test Started----------------:
-2024-08-07 14:21:46,877:INFO:Trying a valid logging in flow process.:
-2024-08-07 14:21:48,851:INFO:Sending a put request to change admin city and mobile number.:
-2024-08-07 14:21:53,006:INFO:----------------Test Completed----------------
-:
-2024-08-07 14:21:55,109:INFO:----------------Test Started----------------:
-2024-08-07 14:21:58,246:INFO:Trying a valid logging in flow process.:
-2024-08-07 14:22:00,035:INFO:Sending a put request to change admin full name.:
-2024-08-07 14:22:02,056:INFO:----------------Test Completed----------------
-:
-2024-08-07 14:22:04,137:INFO:----------------Test Started----------------:
-2024-08-07 14:22:07,350:INFO:Trying a valid logging in flow process.:
-2024-08-07 14:22:09,335:INFO:Sending a put request to change admin gender.:
-2024-08-07 14:22:12,590:INFO:----------------Test Completed----------------
-:
-2024-08-07 14:22:14,678:INFO:----------------Test Started----------------:
-2024-08-07 14:22:17,802:INFO:Trying a valid logging in flow process.:
-2024-08-07 14:22:19,574:INFO:Sending a post request to add a new employee.:
-2024-08-07 14:22:20,057:INFO:Sending a get request to receive an employee by id.:
-2024-08-07 14:22:20,752:INFO:Sending a delete request to delete an employee.:
-2024-08-07 14:22:22,163:INFO:----------------Test Completed----------------
-:
-2024-08-07 14:22:22,164:INFO:----------------Test Started----------------:
-2024-08-07 14:22:25,359:INFO:Trying a valid logging in flow process.:
-2024-08-07 14:22:27,084:INFO:Sending a post request to share a photo by post.:
-2024-08-07 14:22:29,905:INFO:----------------Test Completed----------------
-:
-2024-08-07 14:24:34,459:INFO:----------------Test Started----------------:
-2024-08-07 14:24:37,712:INFO:Trying a valid logging in flow process.:
-2024-08-07 14:24:39,570:INFO:Sending a post request to add a new employee.:
-2024-08-07 14:24:42,371:INFO:----------------Test Completed----------------
-:
-2024-08-07 14:24:48,241:INFO:----------------Test Started----------------:
-2024-08-07 14:24:51,398:INFO:Trying a valid logging in flow process.:
-2024-08-07 14:24:53,183:INFO:Sending a post request to add a new employee.:
-2024-08-07 14:24:53,704:INFO:Sending a get request to receive an employee by id.:
-2024-08-07 14:24:54,440:INFO:Sending a delete request to delete an employee.:
-2024-08-07 14:24:57,185:INFO:----------------Test Completed----------------
-:
-2024-08-07 14:25:10,452:INFO:----------------Test Started----------------:
-2024-08-07 14:25:13,804:INFO:Trying an invalid logging in flow process.:
-2024-08-07 14:25:15,873:INFO:Invalid login message is displayed.:
-2024-08-07 14:25:16,004:INFO:----------------Test Completed----------------
-:
-2024-08-07 14:25:18,102:INFO:----------------Test Started----------------:
-2024-08-07 14:25:21,256:INFO:Trying a valid logging in flow process.:
-2024-08-07 14:25:24,927:INFO:Trying valid logging out flow process, by checking visibility of login button after submitting a logout.:
-2024-08-07 14:25:25,522:INFO:Login button is displayed.:
-2024-08-07 14:25:25,665:INFO:----------------Test Completed----------------
-:
-2024-08-07 14:25:27,738:INFO:----------------Test Started----------------:
-2024-08-07 14:25:30,966:INFO:Trying a valid logging in flow process.:
-2024-08-07 14:25:33,539:INFO:----------------Test Completed----------------
-:
-2024-08-07 14:25:48,952:INFO:----------------Test Started----------------:
-2024-08-07 14:25:52,101:INFO:Trying a valid logging in flow process.:
-2024-08-07 14:25:53,839:INFO:Sending a post request to add a new post.:
-2024-08-07 14:25:54,503:INFO:----------------Test Completed----------------
-:
-2024-08-07 14:25:56,595:INFO:----------------Test Started----------------:
-2024-08-07 14:25:59,699:INFO:Trying a valid logging in flow process.:
-2024-08-07 14:26:01,643:INFO:Sending a post request to add a new employee.:
-2024-08-07 14:26:02,189:INFO:Sending a get request to search for an employee.:
-2024-08-07 14:26:02,832:INFO:----------------Test Completed----------------
-:
-2024-08-07 14:26:04,902:INFO:----------------Test Started----------------:
-2024-08-07 14:26:08,240:INFO:Trying a valid logging in flow process.:
-2024-08-07 14:26:10,162:INFO:Sending a put request to change admin full name.:
-2024-08-07 14:26:10,695:INFO:Sending a get request to receive hiring manager first name.:
-2024-08-07 14:26:11,441:INFO:----------------Test Completed----------------
+2024-08-08 00:18:07,498:INFO:----------------Test Started----------------:
+2024-08-08 00:18:07,499:ERROR:File not found. Starting with an empty library.:
+2024-08-08 00:18:07,499:ERROR:File not found. Starting with an empty library.:
+2024-08-08 00:24:59,254:INFO:----------------Test Started----------------:
+2024-08-08 00:24:59,254:ERROR:File not found. Starting with an empty library.:
+2024-08-08 00:24:59,254:ERROR:File not found. Starting with an empty library.:
+2024-08-08 00:27:41,633:INFO:----------------Test Started----------------:
+2024-08-08 00:27:41,633:ERROR:Configuration file does not exist: C:\Users\Admin\Desktop\automation_bootcamp_final_project\orange_hrm\orange_hrm\orange_hrm.json:
+2024-08-08 00:27:41,634:ERROR:Configuration file does not exist: C:\Users\Admin\Desktop\automation_bootcamp_final_project\orange_hrm\orange_hrm\orange_hrm.json:
+2024-08-08 00:31:59,940:INFO:----------------Test Started----------------:
+2024-08-08 00:31:59,941:ERROR:Configuration file not found at C:\Users\Admin\Desktop\automation_bootcamp_final_project\orange_hrm\orange_hrm\orange_hrm.json. Starting with an empty library.:
+2024-08-08 00:31:59,942:ERROR:Configuration file not found at C:\Users\Admin\Desktop\automation_bootcamp_final_project\orange_hrm\orange_hrm\orange_hrm.json. Starting with an empty library.:
+2024-08-08 00:32:37,058:INFO:----------------Test Started----------------:
+2024-08-08 00:32:37,059:ERROR:Configuration file not found at C:\Users\Admin\Desktop\automation_bootcamp_final_project\orange_hrm\automation_bootcamp_final_project\orange_hrm\orange_hrm.json. Starting with an empty library.:
+2024-08-08 00:32:37,059:ERROR:Configuration file not found at C:\Users\Admin\Desktop\automation_bootcamp_final_project\orange_hrm\automation_bootcamp_final_project\orange_hrm\orange_hrm.json. Starting with an empty library.:
+2024-08-08 00:34:26,290:INFO:----------------Test Started----------------:
+2024-08-08 00:34:26,290:ERROR:File not found. Starting with an empty library.:
+2024-08-08 00:34:26,290:ERROR:File not found. Starting with an empty library.:
+2024-08-08 00:35:08,328:INFO:----------------Test Started----------------:
+2024-08-08 00:35:08,328:ERROR:File not found. Starting with an empty library.:
+2024-08-08 00:35:08,328:ERROR:File not found. Starting with an empty library.:
+2024-08-08 00:35:22,192:INFO:----------------Test Started----------------:
+2024-08-08 00:35:25,662:INFO:Trying a valid logging in flow process.:
+2024-08-08 00:35:27,461:INFO:Sending a post request to add a new post.:
+2024-08-08 00:35:28,081:INFO:----------------Test Completed----------------
 :

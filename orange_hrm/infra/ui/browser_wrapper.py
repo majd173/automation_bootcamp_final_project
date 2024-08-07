@@ -4,14 +4,19 @@ from orange_hrm.logic.config_provider import ConfigProvider
 
 
 class BrowserWrapper:
-    # This class manages choosing a browser.
+    """
+    This class manages choosing a browser.
+    """
+
     def __init__(self):
         self._driver = None  # because I still don't know which driver to choose.
         self.config = ConfigProvider.load_from_file()
 
-    # ------------------------------------------------------------------------------------------------------------
-    # This function determines which browser to open and also opens it.
     def get_driver(self):
+        """
+        This method determines which browser to open and also opens it.
+        :return: self._driver
+        """
         url = self.config.get("login_url")
         if not url:
             raise ValueError("URL not found in the configuration.")
@@ -22,7 +27,7 @@ class BrowserWrapper:
         elif self.config["browser"] == "Edge":
             self._driver = webdriver.Edge()
         else:
-            logging.error("")
+            logging.error("Browser not found.")
 
         self._driver.get(url)
         self._driver.maximize_window()

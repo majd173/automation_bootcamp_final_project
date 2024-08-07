@@ -1,4 +1,5 @@
 import logging
+from selenium.common import TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -28,6 +29,8 @@ class UiMyInfoPage(BasePage):
             contact_details_button.click()
         except NoSuchElementException:
             logging.error("Element can not be found.")
+        except TimeoutException:
+            logging.error("Time out error.")
 
     def check_gender_button_if_enabled(self, employee):
         """
@@ -45,6 +48,9 @@ class UiMyInfoPage(BasePage):
             except NoSuchElementException:
                 logging.error("Element can not be found.")
                 return False
+            except TimeoutException:
+                logging.error("Time out error.")
+                return False
         else:
             try:
                 male_button = self._wait.until(EC.element_to_be_clickable
@@ -55,4 +61,7 @@ class UiMyInfoPage(BasePage):
                     return False
             except NoSuchElementException:
                 logging.error("Element can not be found.")
+                return False
+            except TimeoutException:
+                logging.error("Time out error.")
                 return False

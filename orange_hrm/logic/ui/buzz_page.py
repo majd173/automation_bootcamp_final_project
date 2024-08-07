@@ -1,4 +1,5 @@
 import logging
+from selenium.common import TimeoutException
 from selenium.webdriver.support.expected_conditions import *
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -31,4 +32,7 @@ class UiBuzzPage(BasePage):
                 return False
         except NoSuchElementException:
             logging.error("Element can not be found.")
+            return False
+        except TimeoutException:
+            logging.error("Time out error.")
             return False

@@ -1,4 +1,5 @@
 import logging
+from selenium.common import TimeoutException
 from selenium.webdriver.support.expected_conditions import *
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -18,6 +19,7 @@ class UiHomePage(BasePage):
     LOGOT_BUTTON = "a[href='/web/index.php/auth/logout']"
     PIM_BUTTON = "a[href='/web/index.php/pim/viewPimModule']"
     BUZZ_BUTTON = "a[href='/web/index.php/buzz/viewBuzz']"
+    ADMIN_BUTTON = "a[href='/web/index.php/admin/viewAdminModule']"
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -30,11 +32,14 @@ class UiHomePage(BasePage):
         """
         try:
             admin_full_name = (self._wait.until
-                                  (EC.visibility_of_element_located
-                                   ((By.XPATH, self.EMPLOYEE_FULL_NAME))))
+                               (EC.visibility_of_element_located
+                                ((By.XPATH, self.EMPLOYEE_FULL_NAME))))
             return admin_full_name.text.split(" ")
         except NoSuchElementException:
             logging.error("Element can not be found.")
+            return None
+        except TimeoutException:
+            logging.error("Time out error.")
             return None
 
     def refresh_page(self):
@@ -57,6 +62,8 @@ class UiHomePage(BasePage):
             user_details_button.click()
         except NoSuchElementException:
             logging.error("Element can not be found.")
+        except TimeoutException:
+            logging.error("Time out error.")
 
     def click_logout_button(self):
         """
@@ -70,6 +77,8 @@ class UiHomePage(BasePage):
             logout_button.click()
         except NoSuchElementException:
             logging.error("Element can not be found.")
+        except TimeoutException:
+            logging.error("Time out error.")
 
     def check_user_details_button_displayed(self):
         """
@@ -86,6 +95,9 @@ class UiHomePage(BasePage):
         except NoSuchElementException:
             logging.error("Element can not be found.")
             return False
+        except TimeoutException:
+            logging.error("Time out error.")
+            return False
 
     def click_my_info_button(self):
         """
@@ -98,8 +110,10 @@ class UiHomePage(BasePage):
             my_info_button.click()
         except NoSuchElementException:
             logging.error("Element can not be found.")
+        except TimeoutException:
+            logging.error("Time out error.")
 
-    def click_pim_button(self): # pim = personal information management
+    def click_pim_button(self):  # pim = personal information management
         """
         This method clicks on pim (personal information management) button.
         """
@@ -110,6 +124,8 @@ class UiHomePage(BasePage):
             pim_button.click()
         except NoSuchElementException:
             logging.error("Element can not be found.")
+        except TimeoutException:
+            logging.error("Time out error.")
 
     def click_about_button(self):
         """
@@ -124,6 +140,8 @@ class UiHomePage(BasePage):
             about_button.click()
         except NoSuchElementException:
             logging.error("Element can not be found.")
+        except TimeoutException:
+            logging.error("Time out error.")
 
     def check_active_employees(self):
         """
@@ -141,6 +159,9 @@ class UiHomePage(BasePage):
         except NoSuchElementException:
             logging.error("Element can not be found.")
             return None
+        except TimeoutException:
+            logging.error("Time out error.")
+            return None
 
     def click_buzz_button(self):
         """
@@ -153,3 +174,19 @@ class UiHomePage(BasePage):
             buzz_button.click()
         except NoSuchElementException:
             logging.error("Element can not be found.")
+        except TimeoutException:
+            logging.error("Time out error.")
+
+    def click_admin_button(self):
+        """
+        This method clicks on admin button.
+        """
+        try:
+            admin_button = (self._wait.until
+                            (EC.element_to_be_clickable
+                             ((By.CSS_SELECTOR, self.ADMIN_BUTTON))))
+            admin_button.click()
+        except NoSuchElementException:
+            logging.error("Element can not be found.")
+        except TimeoutException:
+            logging.error("Time out error.")

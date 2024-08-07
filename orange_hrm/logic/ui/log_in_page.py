@@ -1,4 +1,5 @@
 import logging
+from selenium.common import TimeoutException
 from selenium.webdriver.support.expected_conditions import *
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -33,6 +34,8 @@ class LogInPage(BasePage):
             username_input.send_keys(self._config["username"])
         except NoSuchElementException:
             logging.error("Element can not be found.")
+        except TimeoutException:
+            logging.error("Time out error.")
 
     def insert_password(self):
         """
@@ -45,6 +48,8 @@ class LogInPage(BasePage):
             password_input.send_keys(self._config["password"])
         except NoSuchElementException:
             logging.error("Element can not be found.")
+        except TimeoutException:
+            logging.error("Time out error.")
 
     def insert_generated_username(self):
         """
@@ -57,6 +62,8 @@ class LogInPage(BasePage):
             username_input.send_keys(Utilities.generate_random_string_only_letters(7))
         except NoSuchElementException:
             logging.error("Element can not be found.")
+        except TimeoutException:
+            logging.error("Time out error.")
 
     def insert_generated_password(self):
         """
@@ -69,6 +76,8 @@ class LogInPage(BasePage):
             password_input.send_keys(Utilities.generate_random_string_with_punctuation(7))
         except NoSuchElementException:
             logging.error("Element can not be found.")
+        except TimeoutException:
+            logging.error("Time out error.")
 
     def click_log_in_button(self):
         """
@@ -81,6 +90,8 @@ class LogInPage(BasePage):
             login_button.click()
         except NoSuchElementException:
             logging.error("Element can not be found.")
+        except TimeoutException:
+            logging.error("Time out error.")
 
     def valid_login_flow(self):
         """
@@ -101,6 +112,7 @@ class LogInPage(BasePage):
                 logging.error("Cookies can not be found.")
         except Exception as e:
             logging.error(f'Valid login process failed: {e}')
+
 
     def invalid_login_flow(self):
         """
@@ -132,6 +144,9 @@ class LogInPage(BasePage):
         except NoSuchElementException:
             logging.error("Element can not be found.")
             return False
+        except TimeoutException:
+            logging.error("Time out error.")
+            return False
 
     def check_login_button_displayed(self):
         """
@@ -152,4 +167,7 @@ class LogInPage(BasePage):
                 return False
         except NoSuchElementException:
             logging.error("Element can not be found.")
+            return False
+        except TimeoutException:
+            logging.error("Time out error.")
             return False

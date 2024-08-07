@@ -1,4 +1,5 @@
 import logging
+from selenium.common import TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -32,6 +33,9 @@ class UiContactDetailsPage(BasePage):
         except NoSuchElementException:
             logging.error("Element can not be found.")
             return None
+        except TimeoutException:
+            logging.error("Element can not be found.")
+            return None
 
     def check_mobile_field_displayed(self):
         """
@@ -47,4 +51,7 @@ class UiContactDetailsPage(BasePage):
                 return None
         except NoSuchElementException:
             logging.error("Element can not be found.")
+            return None
+        except TimeoutException:
+            logging.error("Time out error.")
             return None
