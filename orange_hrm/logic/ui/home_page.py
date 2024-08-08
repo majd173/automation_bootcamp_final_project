@@ -186,6 +186,7 @@ class UiHomePage(BasePage):
                             (EC.element_to_be_clickable
                              ((By.CSS_SELECTOR, self.ADMIN_BUTTON))))
             admin_button.click()
+            logging.info("Clicking on admin button.")
         except NoSuchElementException:
             logging.error("Element can not be found.")
         except TimeoutException:

@@ -26,6 +26,7 @@ class AddSaveJobPage(BasePage):
                             (EC.element_to_be_clickable
                              ((By.XPATH, self.JOB_INPUT))))
             new_job_name.send_keys(job_name)
+            logging.info("Inserting new job name.")
         except NoSuchElementException:
             logging.error("Element can not be found.")
         except TimeoutException:
@@ -40,6 +41,7 @@ class AddSaveJobPage(BasePage):
                            (EC.element_to_be_clickable
                             ((By.CSS_SELECTOR, self.SAVE_JOB_BUTTON))))
             save_button.click()
+            logging.info("Clicking on save button.")
         except NoSuchElementException:
             logging.error("Element can not be found.")
         except TimeoutException:

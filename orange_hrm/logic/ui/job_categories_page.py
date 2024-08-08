@@ -12,7 +12,7 @@ class JobCategoriesPage(BasePage):
     This class manages UI for job categories page
     """
     ADD_JOB_BUTTON = "button[class='oxd-button oxd-button--medium oxd-button--secondary']"
-    JOB_CATEGORIES_TABLE = "div[row-decorator='oxd-table-decorator-card']"
+    JOB_CATEGORIES_TABLE = "div[class='oxd-table-body']"
 
     def __init__(self, driver):
         super().__init__(driver)
@@ -27,6 +27,7 @@ class JobCategoriesPage(BasePage):
                               (EC.element_to_be_clickable
                                ((By.CSS_SELECTOR, self.ADD_JOB_BUTTON))))
             add_job_button.click()
+            logging.info("Clicking on add job button.")
         except NoSuchElementException:
             logging.error("Element can not be found.")
         except TimeoutException:
@@ -41,6 +42,7 @@ class JobCategoriesPage(BasePage):
                                     (EC.visibility_of_element_located
                                      ((By.CSS_SELECTOR, self.JOB_CATEGORIES_TABLE))))
             if job_categories_table.is_displayed():
+                logging.info("Receiving job categories table.")
                 return job_categories_table.text
             else:
                 return None

@@ -27,6 +27,7 @@ class UiAdminPage(BasePage):
                           (EC.element_to_be_clickable
                            ((By.XPATH, self.JOB_BUTTON))))
             job_button.click()
+            logging.info("Clicking on job button.")
         except NoSuchElementException:
             logging.error("Element can not be found.")
         except TimeoutException:
@@ -41,6 +42,7 @@ class UiAdminPage(BasePage):
                                      (EC.element_to_be_clickable
                                       ((By.XPATH, self.JOB_CATEGORIES_BUTTON))))
             job_categories_button.click()
+            logging.info("Clicking on job categories button.")
         except NoSuchElementException:
             logging.error("Element can not be found.")
         except TimeoutException:
