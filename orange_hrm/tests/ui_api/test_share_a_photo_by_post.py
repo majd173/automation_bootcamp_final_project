@@ -2,11 +2,11 @@ import logging
 import os
 import unittest
 from orange_hrm.infra.config_provider import ConfigProvider
-#-----------------------------API CLASSES----------------------------
+# -----------------------------API CLASSES----------------------------
 from orange_hrm.logic.api.home_page import APIHomePage
 from orange_hrm.infra.api.api_wrapper import ApiWrapper
 from orange_hrm.logic.ui.buzz_page import UiBuzzPage
-#-----------------------------UI CLASSES-----------------------------
+# -----------------------------UI CLASSES-----------------------------
 from orange_hrm.logic.ui.log_in_page import LogInPage
 from orange_hrm.logic.ui.home_page import UiHomePage
 from orange_hrm.infra.ui.browser_wrapper import BrowserWrapper
@@ -48,7 +48,7 @@ class TestSharePhoto(unittest.TestCase):
         self._ui_buzz_page = UiBuzzPage(self._driver)
         # ASSERT
         self.assertTrue(self._ui_buzz_page.check_image_displayed_in_post(),
-                        "Photo is not displayed (has not been shared).")
+                         "Photo is not displayed (has not been shared).")
 
 
 if __name__ == '__main__':

@@ -47,7 +47,8 @@ class TestAddANewPost(unittest.TestCase):
         self.assertTrue(post_request.ok,
                         "Post has not benn accepted.")
         self.assertEqual(post_request.status_code,
-                         200, "Status code is not 200.")
+                         200,
+                         "Status code is not 200.")
 
 
 if __name__ == '__main__':

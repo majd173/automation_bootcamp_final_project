@@ -55,7 +55,8 @@ class TestAddANewJob(unittest.TestCase):
         self._ui_add_save_job_page.insert_new_job_name(new_job)
         self._ui_add_save_job_page.click_on_save_button()
         # ASSERT
-        self.assertIn(new_job, self._ui_job_categories_page.receive_job_categories_table())
+        self.assertIn(new_job, self._ui_job_categories_page.receive_job_categories_table(),
+                      "Job category was not added.")
 
 
 if __name__ == '__main__':

@@ -46,7 +46,7 @@ class TestAddANewEmployee(unittest.TestCase):
         self._login_page = LogInPage(self._driver)
         self._cookie = self._login_page.valid_login_flow()
         self._api_home_page = APIHomePage(self._api)
-        self._employee = EmployeeObject(Utilities.generate_random_number_by_length(3),
+        self._employee = EmployeeObject(Utilities.generate_random_number_by_length(2),
                                         Utilities.generate_random_string_only_letters(7),
                                         Utilities.generate_random_string_only_letters(7),
                                         Utilities.generate_random_string_only_letters(7))
@@ -54,8 +54,10 @@ class TestAddANewEmployee(unittest.TestCase):
         self._home_page = UiHomePage(self._driver)
         self._home_page.click_pim_button()
         self._pim_page = UiPimPage(self._driver)
+        print(self._employee.id)
         # ASSERT
-        self.assertIn(self._employee.id, self._pim_page.all_employees_table())
+        self.assertIn(self._employee.id, self._pim_page.all_employees_table(),
+                      "Employee was not added.")
 
 
 if __name__ == '__main__':

@@ -51,9 +51,11 @@ class TestSearchForAnEmployee(unittest.TestCase):
         # ASSERT
         self.assertTrue(added_employee_response.ok,
                         "Request has not been accepted.")
-        self.assertEqual(added_employee_response.status_code, 200,
+        self.assertEqual(added_employee_response.status_code,
+                         200,
                          "Status code is not 200.")
-        self.assertEqual(added_employee_response.json()['data'][0]['firstName'], employee.firstname,
+        self.assertEqual(added_employee_response.json()['data'][0]['firstName'],
+                         employee.firstname,
                          "Received employee firstname is not correct.")
 
 

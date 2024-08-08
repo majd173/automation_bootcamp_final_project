@@ -44,8 +44,11 @@ class TestDeleteNonExistentEmployee(unittest.TestCase):
         non_existent_employee = self._api_home_page.delete_an_employee(
             cookie, Utilities.generate_random_number_by_length(4))
         # ASSERT
-        self.assertFalse(non_existent_employee.ok, "Request has been accepted.")
-        self.assertEqual(non_existent_employee.status_code, 404, "Status code is not 404.")
+        self.assertFalse(non_existent_employee.ok,
+                         "Request has been accepted.")
+        self.assertEqual(non_existent_employee.status_code,
+                         404,
+                         "Status code is not 404.")
 
 
 if __name__ == '__main__':

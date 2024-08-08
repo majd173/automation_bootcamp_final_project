@@ -2,6 +2,7 @@ import logging
 import os
 import unittest
 from orange_hrm.infra.config_provider import ConfigProvider
+from orange_hrm.infra.jira_handler import JiraHandler
 from orange_hrm.infra.utilities import Utilities
 #-----------------------------API CLASSES----------------------------
 from orange_hrm.logic.api.home_page import APIHomePage
@@ -26,16 +27,22 @@ class TestChangeAdminFullName(unittest.TestCase):
         self._config = ConfigProvider().load_from_file(self._config_file_path)
         self._driver = BrowserWrapper().get_driver()
         self._api = ApiWrapper()
+        self._jira_flag = JiraHandler()
 
     def tearDown(self):
         """
         This method closes driver.
         """
+        self._jira_flag.create_issue(
+            self._config['jira_key'], 'test_change_admin_fullname',
+            'Admin changed name assertion has a wrong result.',
+            'Bug')
         self._driver.close()
         logging.info("----------------Test Completed----------------\n")
 
     def test_change_admin_fullname(self):
         """
+        THIS TEST WAS FAILED ON PURPOSE IN ORDER TO RUN JIRA ISSUE.
         This method tests changing admin full name - UI & API.
         Test case: TC-04 / Change admin full name.
         """
@@ -50,8 +57,8 @@ class TestChangeAdminFullName(unittest.TestCase):
         home_page = UiHomePage(self._driver)
         home_page.refresh_page()
         # ASSERT
-        self.assertEqual(home_page.get_admin_full_name()[0], admin_object.first_name)
-        self.assertEqual(home_page.get_admin_full_name()[1], admin_object.last_name)
+        self.assertEqual(home_page.get_admin_full_name()[1], admin_object.first_name, "Wrong first name")
+        self.assertEqual(home_page.get_admin_full_name()[0], admin_object.last_name, "Wrong last name")
 
 
 if __name__ == '__main__':

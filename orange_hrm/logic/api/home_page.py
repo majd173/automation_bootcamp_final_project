@@ -43,6 +43,7 @@ class APIHomePage:
         """
         This method is used to change employee full name.
         :return: response
+        :param: cookie, admin_object
         """
         try:
             logging.info("Sending a put request to change admin full name.")
@@ -58,6 +59,7 @@ class APIHomePage:
         """
         This method is used to change admin city and mobile number.
         :return: response
+        :param: cookie, admin
         """
         try:
             logging.info("Sending a put request to change admin city and mobile number.")
@@ -73,6 +75,7 @@ class APIHomePage:
         """
         This method is used to add a new employee.
         :return: response
+        :param: cookie, employee
         """
         try:
             logging.info("Sending a post request to add a new employee.")
@@ -88,6 +91,7 @@ class APIHomePage:
         """
         This method is used to get active employees number.
         :return: response
+        :param: cookie
         """
         try:
             logging.info("Sending a get request to get active employees number.")
@@ -103,6 +107,7 @@ class APIHomePage:
         """
         This method is used to change admin gender.
         :return: response
+        :param: cookie, admin
         """
         try:
             logging.info("Sending a put request to change admin gender.")
@@ -118,6 +123,7 @@ class APIHomePage:
         """
         This method is used to receive an employee by id.
         :return: employee number.
+        :param: cookie, id
         """
         try:
             logging.info("Sending a get request to receive an employee number by his/her id.")
@@ -140,6 +146,7 @@ class APIHomePage:
         """
         This method is used to delete an employee by employee number.
         :return: response
+        :param: cookie, employee_number
         """
         try:
             logging.info("Sending a delete request to delete an employee.")
@@ -160,6 +167,7 @@ class APIHomePage:
         """
         This method is used to add a new post.
         :return: response
+        :param: cookie, post
         """
         try:
             logging.info("Sending a post request to add a new post.")
@@ -179,6 +187,7 @@ class APIHomePage:
         """
         This method is used to search for an employee by firstname.
         :return: response
+        :param: cookie, firstname
         """
         try:
             logging.info("Sending a get request to search for an employee.")
@@ -198,6 +207,7 @@ class APIHomePage:
         """
         This method is used to share a photo by post.
         :return: response
+        :param: cookie, body
         """
         try:
             logging.info("Sending a post request to share a photo by post.")
@@ -213,6 +223,7 @@ class APIHomePage:
         """
         This method is used to get hiring manager first name.
         :return: hiring manager firstname.
+        :param: cookie
         """
         try:
             logging.info("Sending a get request to receive hiring manager first name.")

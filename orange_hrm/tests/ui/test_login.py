@@ -42,7 +42,8 @@ class TestLogin(unittest.TestCase):
         self._login_page.valid_login_flow()
         self._home_page = UiHomePage(self._driver)
         # ASSERT
-        self.assertTrue(self._home_page.check_user_details_button_displayed())
+        self.assertTrue(self._home_page.check_user_details_button_displayed(),
+                        "User details button is not displayed.")
 
     def test_invalid_login_process(self):
         """
@@ -53,7 +54,8 @@ class TestLogin(unittest.TestCase):
         self._login_page = LogInPage(self._driver)
         self._login_page.invalid_login_flow()
         # ASSERT
-        self.assertEqual(self._login_page.check_invalid_login_message(), True)
+        self.assertTrue(self._login_page.check_invalid_login_message(),
+                        "Invalid login message is not displayed.")
 
     def test_logout_process(self):
         """
@@ -66,7 +68,8 @@ class TestLogin(unittest.TestCase):
         self._home_page = UiHomePage(self._driver)
         self._home_page.click_logout_button()
         # ASSERT
-        self.assertTrue(self._login_page.check_login_button_displayed(), True)
+        self.assertTrue(self._login_page.check_login_button_displayed(),
+                        "Login button is not displayed.")
 
 
 if __name__ == '__main__':

@@ -2,7 +2,6 @@ import logging
 import os
 import unittest
 from orange_hrm.infra.config_provider import ConfigProvider
-from orange_hrm.infra.jira_handler import JiraHandler
 from orange_hrm.infra.utilities import Utilities
 #-----------------------------API CLASSES----------------------------
 from orange_hrm.logic.api.home_page import APIHomePage
@@ -28,16 +27,11 @@ class TestDeleteAnEmployee(unittest.TestCase):
         self._config = ConfigProvider().load_from_file(self._config_file_path)
         self._driver = BrowserWrapper().get_driver()
         self._api = ApiWrapper()
-        self._jira_flag = JiraHandler()
 
     def tearDown(self):
         """
         This method closes driver.
         """
-        self._jira_flag.create_issue(
-            self._config['jira_key'], 'test_delete_an_employee',
-            'Make sure to create a test for deleting all employees by API request.',
-            'Task')
         self._driver.close()
         logging.info("----------------Test Completed----------------\n")
 
@@ -61,7 +55,8 @@ class TestDeleteAnEmployee(unittest.TestCase):
         self._ui_home_page.click_pim_button()
         self._ui_pim_page = UiPimPage(self._driver)
         # ASSERT
-        self.assertNotIn(employee.id, self._ui_pim_page.all_employees_table())
+        self.assertNotIn(employee.id, self._ui_pim_page.all_employees_table(),
+                         "Employee still exists.")
 
 if __name__ == '__main__':
     unittest.main()

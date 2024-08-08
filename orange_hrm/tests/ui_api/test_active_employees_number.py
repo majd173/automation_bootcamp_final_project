@@ -47,7 +47,8 @@ class TestActiveEmployeesNumber(unittest.TestCase):
         self._ui_home_page.click_about_button()
         # ASSERT
         self.assertEqual(int(self._ui_home_page.check_active_employees()),
-                         active_employees_number, "Incorrect active employees number.")
+                         active_employees_number,
+                         "Incorrect active employees number.")
 
 
 if __name__ == '__main__':

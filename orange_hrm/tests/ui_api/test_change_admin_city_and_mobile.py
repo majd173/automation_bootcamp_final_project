@@ -30,6 +30,7 @@ class TestAdminDetails(unittest.TestCase):
         self._driver = BrowserWrapper().get_driver()
         self._api = ApiWrapper()
 
+
     def tearDown(self):
         """
         This method closes driver.
@@ -47,7 +48,7 @@ class TestAdminDetails(unittest.TestCase):
         cookie = self._login_page.valid_login_flow()
         self._api_home_page = APIHomePage(self._api)
         admin = AdminContactDetails(
-            Utilities.generate_random_string_only_letters(6),
+            Utilities.generate_random_string_only_letters(7),
             Utilities.generate_random_number_by_length(10))
         self._api_home_page.change_admin_city_and_mobile(cookie, admin)
         self._home_page = UiHomePage(self._driver)
@@ -56,8 +57,10 @@ class TestAdminDetails(unittest.TestCase):
         self._my_info_page.click_contact_details_button()
         self._contact_details_page = UiContactDetailsPage(self._driver)
         # ASSERT
-        self.assertEqual(self._contact_details_page.check_city_field_displayed(), admin.city)
-        self.assertEqual(self._contact_details_page.check_mobile_field_displayed(), admin.mobile)
+        self.assertEqual(self._contact_details_page.check_city_field_displayed(),
+                         admin.city, "Updated city is not displayed.")
+        self.assertEqual(self._contact_details_page.check_mobile_field_displayed(),
+                         admin.mobile, "Updated mobile number is not displayed.")
 
 
 

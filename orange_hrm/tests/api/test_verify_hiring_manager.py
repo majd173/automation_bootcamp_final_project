@@ -47,7 +47,9 @@ class TestVerifyHiringManager(unittest.TestCase):
                                    Utilities.generate_random_string_only_letters(7))
         self._api_home_page.change_admin_full_name(cookie, admin_object)
         # ASSERT
-        self.assertEqual(admin_object.first_name, self._api_home_page.get_hiring_managers(cookie))
+        self.assertEqual(admin_object.first_name,
+                         self._api_home_page.get_hiring_managers(cookie),
+                         "Admin is not in the list.")
 
 
 if __name__ == '__main__':
