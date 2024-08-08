@@ -219,7 +219,7 @@ class APIHomePage:
         except requests.RequestException as e:
             logging.error(f'Post request has not been sent.: {e}')
 
-    def get_hiring_managers(self, cookie):
+    def get_hiring_managers(self, cookie, admin_object: AdminObject):
         """
         This method is used to get hiring manager first name.
         :return: hiring manager firstname.
@@ -234,6 +234,13 @@ class APIHomePage:
                 f'{self._url}{self.HIRING_MANAGERS}',
                 cookie,
                 params)
-            return response.json()['data'][0]['firstName']
+            # return response.json()['data'][0]['firstName']
+            managers_list = response.json()['data']
+            for manager in managers_list:
+                if manager['firstName'] == admin_object:
+                    return manager['firstName']
+                else:
+                    return None
         except requests.RequestException as e:
             logging.error(f'Get request has not been sent.: {e}')
+            return None
