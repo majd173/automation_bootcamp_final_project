@@ -1,11 +1,13 @@
 import logging
+import os
+
 from selenium.common import TimeoutException
 from selenium.webdriver.support.expected_conditions import *
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 from orange_hrm.infra.ui.base_page import BasePage
-from orange_hrm.logic.config_provider import ConfigProvider
+from orange_hrm.infra.config_provider import ConfigProvider
 from orange_hrm.infra.utilities import Utilities
 
 
@@ -20,7 +22,9 @@ class LogInPage(BasePage):
 
     def __init__(self, driver):
         super().__init__(driver)
-        self._config = ConfigProvider().load_from_file()
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        self._config_file_path = os.path.join(base_dir, '../../orange_hrm.json')
+        self._config = ConfigProvider().load_from_file(self._config_file_path)
         self._wait = WebDriverWait(self._driver, 10)
 
     def insert_username(self):

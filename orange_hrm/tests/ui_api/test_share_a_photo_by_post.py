@@ -1,6 +1,7 @@
 import logging
+import os
 import unittest
-from orange_hrm.logic.config_provider import ConfigProvider
+from orange_hrm.infra.config_provider import ConfigProvider
 #-----------------------------API CLASSES----------------------------
 from orange_hrm.logic.api.home_page import APIHomePage
 from orange_hrm.infra.api.api_wrapper import ApiWrapper
@@ -19,7 +20,9 @@ class TestSharePhoto(unittest.TestCase):
         """
         logging.info("----------------Test Started----------------")
         # ARRANGE
-        self._config = ConfigProvider().load_from_file()
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        self._config_file_path = os.path.join(base_dir, '../../orange_hrm.json')
+        self._config = ConfigProvider().load_from_file(self._config_file_path)
         self._driver = BrowserWrapper().get_driver()
         self._api = ApiWrapper()
 

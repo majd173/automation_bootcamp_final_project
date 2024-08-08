@@ -1,6 +1,8 @@
 import logging
+import os
 import unittest
-from orange_hrm.logic.config_provider import ConfigProvider
+from orange_hrm.infra.config_provider import ConfigProvider
+from orange_hrm.infra.jira_handler import JiraHandler
 from orange_hrm.infra.utilities import Utilities
 #-----------------------------API CLASSES----------------------------
 from orange_hrm.logic.api.home_page import APIHomePage
@@ -21,14 +23,21 @@ class TestDeleteAnEmployee(unittest.TestCase):
         """
         logging.info("----------------Test Started----------------")
         # ARRANGE
-        self._config = ConfigProvider().load_from_file()
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        self._config_file_path = os.path.join(base_dir, '../../orange_hrm.json')
+        self._config = ConfigProvider().load_from_file(self._config_file_path)
         self._driver = BrowserWrapper().get_driver()
         self._api = ApiWrapper()
+        self._jira_flag = JiraHandler()
 
     def tearDown(self):
         """
         This method closes driver.
         """
+        self._jira_flag.create_issue(
+            self._config['jira_key'], 'test_delete_an_employee',
+            'Make sure to create a test for deleting all employees by API request.',
+            'Task')
         self._driver.close()
         logging.info("----------------Test Completed----------------\n")
 

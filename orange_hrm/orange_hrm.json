@@ -6,6 +6,10 @@
   "username": "Admin",
   "password": "admin123",
 
+  "jira_url" : "https://majd173.atlassian.net/",
+  "jira_mail" : "majdb173@gmail.com",
+  "jira_key" : "OH",
+
   "share_photo": {
 
   "type": "photo",

@@ -1,6 +1,8 @@
 import logging
+import os
+
 from selenium import webdriver
-from orange_hrm.logic.config_provider import ConfigProvider
+from orange_hrm.infra.config_provider import ConfigProvider
 
 
 class BrowserWrapper:
@@ -10,7 +12,9 @@ class BrowserWrapper:
 
     def __init__(self):
         self._driver = None  # because I still don't know which driver to choose.
-        self.config = ConfigProvider.load_from_file()
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        self._config_file_path = os.path.join(base_dir, '../../orange_hrm.json')
+        self.config = ConfigProvider.load_from_file(self._config_file_path)
 
     def get_driver(self):
         """

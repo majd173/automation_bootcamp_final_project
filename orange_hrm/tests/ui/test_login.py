@@ -1,9 +1,10 @@
 import logging
+import os
 import unittest
 #-----------------------------INFRA CLASSES---------------------------
 from orange_hrm.infra.ui.browser_wrapper import BrowserWrapper
 #-----------------------------LOGIC CLASSES---------------------------
-from orange_hrm.logic.config_provider import ConfigProvider
+from orange_hrm.infra.config_provider import ConfigProvider
 from orange_hrm.logic.ui.home_page import UiHomePage
 from orange_hrm.logic.ui.log_in_page import LogInPage
 
@@ -19,7 +20,9 @@ class TestLogin(unittest.TestCase):
         """
         logging.info("----------------Test Started----------------")
         # ARRANGE
-        self._config = ConfigProvider().load_from_file()
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        self._config_file_path = os.path.join(base_dir, '../../orange_hrm.json')
+        self._config = ConfigProvider().load_from_file(self._config_file_path)
         self._driver = BrowserWrapper().get_driver()
 
     def tearDown(self):

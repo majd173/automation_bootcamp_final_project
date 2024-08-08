@@ -1,7 +1,8 @@
 import requests
 import logging
+import os
 #-----------------------------API CLASSES----------------------------
-from orange_hrm.logic.config_provider import ConfigProvider
+from orange_hrm.infra.config_provider import ConfigProvider
 from orange_hrm.infra.api.api_wrapper import ApiWrapper
 from orange_hrm.logic.api.entities.admin_contact_details import AdminContactDetails
 from orange_hrm.logic.api.entities.employee_object import EmployeeObject
@@ -31,7 +32,9 @@ class APIHomePage:
         try:
             self._request = request
             self._api = ApiWrapper()
-            self._config = ConfigProvider().load_from_file()
+            base_dir = os.path.dirname(os.path.abspath(__file__))
+            self._config_file_path = os.path.join(base_dir, '../../orange_hrm.json')
+            self._config = ConfigProvider().load_from_file(self._config_file_path)
             self._url = self._config['api_base_url']
         except ImportError:
             logging.error("Can not open orange_hrm.json file.")
