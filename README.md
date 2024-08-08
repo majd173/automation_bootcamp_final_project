@@ -40,8 +40,10 @@ This repository contains a set of automated tests for the OrangeHRM website, cov
 ### Running Tests:
 #### Go to all_test_runner.py file in the tests folder and open in terminal:
 * for regular test runner insert the following command: pytest
-* for allure tests runner: pytest --alluredir=./results
+* for allure test runner: pytest --alluredir=./results
 * for allure test report: allure serve ./results
+* for html test report: pytest --html=report.html
+* for xml test report: pytest --junitxml=path/to/report.xml
 
  
 ### Contributing:
