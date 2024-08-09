@@ -9,6 +9,11 @@ class ConfigProvider:
 
     @staticmethod
     def load_from_file(filename):
+        """
+        This method loads config file.
+        :param: filename
+        :return: json file.
+        """
         try:
             with open(filename, 'r') as f:
                 return json.load(f)
