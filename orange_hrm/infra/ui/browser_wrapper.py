@@ -1,6 +1,5 @@
 import logging
 import os
-
 from selenium import webdriver
 from orange_hrm.infra.config_provider import ConfigProvider
 

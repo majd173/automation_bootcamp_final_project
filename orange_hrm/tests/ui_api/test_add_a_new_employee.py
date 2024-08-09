@@ -54,7 +54,6 @@ class TestAddANewEmployee(unittest.TestCase):
         self._home_page = UiHomePage(self._driver)
         self._home_page.click_pim_button()
         self._pim_page = UiPimPage(self._driver)
-        print(self._employee.id)
         # ASSERT
         self.assertIn(self._employee.id, self._pim_page.all_employees_table(),
                       "Employee was not added.")

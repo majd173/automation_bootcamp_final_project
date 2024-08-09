@@ -12,7 +12,6 @@ This repository contains a set of automated tests for the OrangeHRM website, cov
 5. [Running Tests](#running-tests)
 6. [Test Structure](#test-structure)
 7. [Contributing](#contributing)
-8. [License](#license)
 9. [Contact](#contact)
 ### Before running the tests, ensure that you have the following installed:
 - [Python](https://www.python.org/) for API tests
@@ -27,6 +26,8 @@ This repository contains a set of automated tests for the OrangeHRM website, cov
 * pip install -r requirements.txt
 * pip install selenium
 * pip install requests
+* pip install allure
+* pip install pytest
 
 ### Configuration
 #### UI Tests
