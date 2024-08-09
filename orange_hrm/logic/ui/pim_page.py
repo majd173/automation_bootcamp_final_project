@@ -22,6 +22,7 @@ class UiPimPage(BasePage):
         :return: extracted text from employees table.
         """
         try:
+            logging.info("Receiving table of all employees.")
             employees_table = (self._wait.until
                                (EC.visibility_of_element_located
                                 ((By.CSS_SELECTOR, self.EMPLOYEES_TABLE))))

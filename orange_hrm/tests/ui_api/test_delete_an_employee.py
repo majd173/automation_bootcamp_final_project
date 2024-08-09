@@ -3,11 +3,11 @@ import os
 import unittest
 from orange_hrm.infra.config_provider import ConfigProvider
 from orange_hrm.infra.utilities import Utilities
-#-----------------------------API CLASSES----------------------------
+# -----------------------------API CLASSES----------------------------
 from orange_hrm.logic.api.home_page import APIHomePage
 from orange_hrm.infra.api.api_wrapper import ApiWrapper
 from orange_hrm.logic.api.entities.employee_object import EmployeeObject
-#-----------------------------UI CLASSES-----------------------------
+# -----------------------------UI CLASSES-----------------------------
 from orange_hrm.logic.ui.log_in_page import LogInPage
 from orange_hrm.logic.ui.home_page import UiHomePage
 from orange_hrm.infra.ui.browser_wrapper import BrowserWrapper
@@ -57,6 +57,7 @@ class TestDeleteAnEmployee(unittest.TestCase):
         # ASSERT
         self.assertNotIn(employee.id, self._ui_pim_page.all_employees_table(),
                          "Employee still exists.")
+
 
 if __name__ == '__main__':
     unittest.main()
