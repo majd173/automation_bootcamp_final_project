@@ -40,7 +40,7 @@ class TestAddANewPost(unittest.TestCase):
         # ACT
         self._login_page = LogInPage(self._driver)
         cookie = self._login_page.valid_login_flow()
-        generated_post = Utilities.generate_random_string_with_punctuation(20)
+        generated_post = Utilities.generate_random_string_with_punctuation(19)
         self._api_home_page = APIHomePage(self._api)
         post_request = self._api_home_page.add_a_new_post(cookie, generated_post)
         # ASSERT

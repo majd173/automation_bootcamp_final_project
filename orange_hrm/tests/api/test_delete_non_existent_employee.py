@@ -29,7 +29,6 @@ class TestDeleteNonExistentEmployee(unittest.TestCase):
         """
         This method closes driver.
         """
-        self._driver.close()
         logging.info("----------------Test Completed----------------\n")
 
     def test_non_existent_employee(self):
@@ -42,7 +41,7 @@ class TestDeleteNonExistentEmployee(unittest.TestCase):
         cookie = self._login_page.valid_login_flow()
         self._api_home_page = APIHomePage(self._api)
         non_existent_employee = self._api_home_page.delete_an_employee(
-            cookie, Utilities.generate_random_number_by_length(4))
+            cookie, Utilities.generate_random_number_by_length(12))
         # ASSERT
         self.assertFalse(non_existent_employee.ok,
                          "Request has been accepted.")
