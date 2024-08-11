@@ -29,13 +29,6 @@ class TestChangeAdminFullName(unittest.TestCase):
         self._api = ApiWrapper()
         self._jira_flag = JiraHandler()
 
-    def tearDown(self):
-        """
-        This method closes driver.
-        """
-        self._driver.close()
-        logging.info("----------------Test Completed----------------\n")
-
     def test_change_admin_fullname(self):
         """
         THIS TEST WAS FAILED ON PURPOSE IN ORDER TO RUN JIRA ISSUE.
@@ -56,12 +49,20 @@ class TestChangeAdminFullName(unittest.TestCase):
         try:
             self.assertEqual(home_page.get_admin_full_name()[1], admin_object.first_name, "Wrong first name")
             self.assertEqual(home_page.get_admin_full_name()[0], admin_object.last_name, "Wrong last name")
-        except AssertionError:
-            self._jira_flag.create_issue(
-                self._config['jira_key'], 'test_change_admin_fullname',
-                'Admin changed name assertion has a wrong result.',
-                'Bug')
-            raise
+        except:
+            self._fail = True
+            raise AssertionError
+
+    def tearDown(self):
+        """
+        This method closes driver.
+        """
+        if self._fail:
+            self._jira_flag.create_issue(self._config['jira_key'], 'test_change_admin_fullname',
+                                         'AssertionError: Wrong full name.',
+                                         'Bug')
+        self._driver.close()
+        logging.info("----------------Test Completed----------------\n")
 
 
 if __name__ == '__main__':
