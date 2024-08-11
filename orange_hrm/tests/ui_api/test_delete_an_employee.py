@@ -29,6 +29,7 @@ class TestDeleteAnEmployee(unittest.TestCase):
         self._driver = BrowserWrapper().get_driver()
         self._api = ApiWrapper()
         self._jira_flag = JiraHandler()
+        self._login_page = LogInPage(self._driver)
 
     def tearDown(self):
         """
@@ -48,13 +49,12 @@ class TestDeleteAnEmployee(unittest.TestCase):
         Test case: TC-09 / Delete an employee.
         """
         # ACT
-        self._login_page = LogInPage(self._driver)
-        cookie = self._login_page.valid_login_flow()
+        self._cookie = self._login_page.valid_login_flow()
         self._api_home_page = APIHomePage(self._api)
         employee = APIHomePage.generate_random_employee()
-        self._api_home_page.add_a_new_employee(cookie, employee)
-        employee_number = self._api_home_page.receive_an_employee_by_id(cookie, employee.id)
-        self._api_home_page.delete_an_employee(cookie, employee_number)
+        self._api_home_page.add_a_new_employee(self._cookie, employee)
+        employee_number = self._api_home_page.receive_an_employee_by_id(self._cookie, employee.id)
+        self._api_home_page.delete_an_employee(self._cookie, employee_number)
         self._ui_home_page = UiHomePage(self._driver)
         self._ui_home_page.click_pim_button()
         self._ui_pim_page = UiPimPage(self._driver)
