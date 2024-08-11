@@ -35,3 +35,9 @@ class BrowserWrapper:
         self._driver.get(url)
         self._driver.maximize_window()
         return self._driver
+
+    def close_driver(self):
+        try:
+            self._driver.close()
+        except Exception as e:
+            logging.error(f"Can not close driver. {e}")

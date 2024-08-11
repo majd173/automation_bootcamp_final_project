@@ -27,6 +27,7 @@ class TestDeleteAnEmployee(unittest.TestCase):
         self._config_file_path = os.path.join(base_dir, '../../orange_hrm.json')
         self._config = ConfigProvider().load_from_file(self._config_file_path)
         self._driver = BrowserWrapper().get_driver()
+        self._close = BrowserWrapper()
         self._api = ApiWrapper()
         self._jira_flag = JiraHandler()
         self._login_page = LogInPage(self._driver)
@@ -39,7 +40,7 @@ class TestDeleteAnEmployee(unittest.TestCase):
             self._config['jira_key'], 'test_delete_an_employee',
             'Add a new test assertion via API.',
             'Task')
-        self._driver.close()
+        self._close.close_driver()
         logging.info("----------------Test Completed----------------\n")
 
     def test_delete_an_employee(self):
