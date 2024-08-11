@@ -17,18 +17,6 @@ from orange_hrm.logic.ui.pim_page import UiPimPage
 
 class TestDeleteAnEmployee(unittest.TestCase):
 
-    def tearDown(self):
-        """
-        This method closes driver.
-        """
-        self._jira_flag = JiraHandler()
-        self._jira_flag.create_issue(
-            self._config['jira_key'], 'test_delete_an_employee',
-            'Add a new test that deletes all employees.',
-            'Task')
-        self._driver.close()
-        logging.info("----------------Test Completed----------------\n")
-
     def test_delete_an_employee(self):
         """
         This method tests deleting a new employee.
@@ -58,6 +46,19 @@ class TestDeleteAnEmployee(unittest.TestCase):
         # ASSERT
         self.assertNotIn(employee_object.id, self._ui_pim_page.all_employees_table(),
                          "Employee still exists.")
+
+    def tearDown(self):
+        """
+        This method closes driver.
+        Also sends a Jira issue.
+        """
+        self._jira_flag = JiraHandler()
+        self._jira_flag.create_issue(
+            self._config['jira_key'], 'test_delete_an_employee',
+            'Add a new test that deletes all employees.',
+            'Task')
+        self._driver.close()
+        logging.info("----------------Test Completed----------------\n")
 
 
 if __name__ == '__main__':
