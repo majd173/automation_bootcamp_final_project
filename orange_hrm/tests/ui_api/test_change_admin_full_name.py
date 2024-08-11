@@ -4,11 +4,11 @@ import unittest
 from orange_hrm.infra.config_provider import ConfigProvider
 from orange_hrm.infra.jira_handler import JiraHandler
 from orange_hrm.infra.utilities import Utilities
-#-----------------------------API CLASSES----------------------------
+# -----------------------------API CLASSES----------------------------
 from orange_hrm.logic.api.home_page import APIHomePage
 from orange_hrm.infra.api.api_wrapper import ApiWrapper
 from orange_hrm.logic.api.entities.admin_object import AdminObject
-#-----------------------------UI CLASSES-----------------------------
+# -----------------------------UI CLASSES-----------------------------
 from orange_hrm.logic.ui.log_in_page import LogInPage
 from orange_hrm.logic.ui.home_page import UiHomePage
 from orange_hrm.infra.ui.browser_wrapper import BrowserWrapper
@@ -33,10 +33,6 @@ class TestChangeAdminFullName(unittest.TestCase):
         """
         This method closes driver.
         """
-        self._jira_flag.create_issue(
-            self._config['jira_key'], 'test_change_admin_fullname',
-            'Admin changed name assertion has a wrong result.',
-            'Bug')
         self._driver.close()
         logging.info("----------------Test Completed----------------\n")
 
@@ -57,8 +53,15 @@ class TestChangeAdminFullName(unittest.TestCase):
         home_page = UiHomePage(self._driver)
         home_page.refresh_page()
         # ASSERT
-        self.assertEqual(home_page.get_admin_full_name()[1], admin_object.first_name, "Wrong first name")
-        self.assertEqual(home_page.get_admin_full_name()[0], admin_object.last_name, "Wrong last name")
+        try:
+            self.assertEqual(home_page.get_admin_full_name()[1], admin_object.first_name, "Wrong first name")
+            self.assertEqual(home_page.get_admin_full_name()[0], admin_object.last_name, "Wrong last name")
+        except AssertionError:
+            self._jira_flag.create_issue(
+                self._config['jira_key'], 'test_change_admin_fullname',
+                'Admin changed name assertion has a wrong result.',
+                'Bug')
+            raise
 
 
 if __name__ == '__main__':
