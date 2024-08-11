@@ -17,19 +17,6 @@ from orange_hrm.logic.ui.pim_page import UiPimPage
 
 class TestDeleteAnEmployee(unittest.TestCase):
 
-    def setUp(self):
-        """
-        This method initializes driver and loads config file.
-        """
-        logging.info("----------------Test Started----------------")
-        # ARRANGE
-        base_dir = os.path.dirname(os.path.abspath(__file__))
-        self._config_file_path = os.path.join(base_dir, '../../orange_hrm.json')
-        self._config = ConfigProvider().load_from_file(self._config_file_path)
-        self._driver = BrowserWrapper().get_driver()
-        self._api = ApiWrapper()
-        self._login_page = LogInPage(self._driver)
-
     def tearDown(self):
         """
         This method closes driver.
@@ -45,9 +32,18 @@ class TestDeleteAnEmployee(unittest.TestCase):
     def test_delete_an_employee(self):
         """
         This method tests deleting a new employee.
+        Initializing driver and api wrapper.
         Cookie is being extracted after submitting a login.
         Test case: TC-09 / Delete an employee.
         """
+        logging.info("----------------Test Started----------------")
+        # ARRANGE
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        self._config_file_path = os.path.join(base_dir, '../../orange_hrm.json')
+        self._config = ConfigProvider().load_from_file(self._config_file_path)
+        self._driver = BrowserWrapper().get_driver()
+        self._api = ApiWrapper()
+        self._login_page = LogInPage(self._driver)
         # ACT
         self._cookie = self._login_page.valid_login_flow()
         self._api_home_page = APIHomePage(self._api)
