@@ -28,16 +28,16 @@ class TestDeleteAnEmployee(unittest.TestCase):
         self._config = ConfigProvider().load_from_file(self._config_file_path)
         self._driver = BrowserWrapper().get_driver()
         self._api = ApiWrapper()
-        self._jira_flag = JiraHandler()
         self._login_page = LogInPage(self._driver)
 
     def tearDown(self):
         """
         This method closes driver.
         """
+        self._jira_flag = JiraHandler()
         self._jira_flag.create_issue(
             self._config['jira_key'], 'test_delete_an_employee',
-            'Add a new test assertion via API.',
+            'Add a new test that deletes all employees.',
             'Task')
         self._driver.close()
         logging.info("----------------Test Completed----------------\n")
