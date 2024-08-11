@@ -1,9 +1,10 @@
 import requests
 import logging
 import os
-#-----------------------------API CLASSES----------------------------
+# -----------------------------API CLASSES----------------------------
 from orange_hrm.infra.config_provider import ConfigProvider
 from orange_hrm.infra.api.api_wrapper import ApiWrapper
+from orange_hrm.infra.utilities import Utilities
 from orange_hrm.logic.api.entities.admin_contact_details import AdminContactDetails
 from orange_hrm.logic.api.entities.employee_object import EmployeeObject
 from orange_hrm.logic.api.entities.admin_object import AdminObject
@@ -70,6 +71,22 @@ class APIHomePage:
             return response
         except requests.RequestException as e:
             logging.error(f'Put request has not been sent.: {e}')
+
+    @staticmethod
+    def generate_random_employee():
+        """
+        This method is used to generate an employee.
+        :return: An employee object with random values
+                    (first name, middle name, last name, employee id).
+        """
+        try:
+            employee = EmployeeObject(Utilities.generate_random_string_only_letters(5),
+                                      Utilities.generate_random_string_only_letters(5),
+                                      Utilities.generate_random_string_only_letters(5),
+                                      Utilities.generate_random_number_by_length(2))
+            return employee
+        except Exception as e:
+            logging.error(f'Can not generate an employee. {e}')
 
     def add_a_new_employee(self, cookie, employee: EmployeeObject):
         """

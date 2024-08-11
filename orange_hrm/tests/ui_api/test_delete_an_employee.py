@@ -44,16 +44,14 @@ class TestDeleteAnEmployee(unittest.TestCase):
     def test_delete_an_employee(self):
         """
         This method tests deleting a new employee.
+        Cookie is being extracted after submitting a login.
         Test case: TC-09 / Delete an employee.
         """
         # ACT
         self._login_page = LogInPage(self._driver)
         cookie = self._login_page.valid_login_flow()
         self._api_home_page = APIHomePage(self._api)
-        employee = EmployeeObject(Utilities.generate_random_string_only_letters(5),
-                                  Utilities.generate_random_string_only_letters(5),
-                                  Utilities.generate_random_string_only_letters(5),
-                                  Utilities.generate_random_number_by_length(2))
+        employee = APIHomePage.generate_random_employee()
         self._api_home_page.add_a_new_employee(cookie, employee)
         employee_number = self._api_home_page.receive_an_employee_by_id(cookie, employee.id)
         self._api_home_page.delete_an_employee(cookie, employee_number)
