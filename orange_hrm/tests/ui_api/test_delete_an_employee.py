@@ -27,7 +27,6 @@ class TestDeleteAnEmployee(unittest.TestCase):
         self._config_file_path = os.path.join(base_dir, '../../orange_hrm.json')
         self._config = ConfigProvider().load_from_file(self._config_file_path)
         self._driver = BrowserWrapper().get_driver()
-        self._close = BrowserWrapper()
         self._api = ApiWrapper()
         self._jira_flag = JiraHandler()
         self._login_page = LogInPage(self._driver)
@@ -40,7 +39,7 @@ class TestDeleteAnEmployee(unittest.TestCase):
             self._config['jira_key'], 'test_delete_an_employee',
             'Add a new test assertion via API.',
             'Task')
-        self._close.close_driver()
+        self._driver.close()
         logging.info("----------------Test Completed----------------\n")
 
     def test_delete_an_employee(self):
@@ -52,15 +51,16 @@ class TestDeleteAnEmployee(unittest.TestCase):
         # ACT
         self._cookie = self._login_page.valid_login_flow()
         self._api_home_page = APIHomePage(self._api)
-        employee = APIHomePage.generate_random_employee()
-        self._api_home_page.add_a_new_employee(self._cookie, employee)
-        employee_number = self._api_home_page.receive_an_employee_by_id(self._cookie, employee.id)
+        employee_object = APIHomePage.generate_random_employee()
+        self._api_home_page.add_a_new_employee(self._cookie, employee_object)
+        employee_number = self._api_home_page.receive_an_employee_by_id(
+            self._cookie, employee_object.id)
         self._api_home_page.delete_an_employee(self._cookie, employee_number)
         self._ui_home_page = UiHomePage(self._driver)
         self._ui_home_page.click_pim_button()
         self._ui_pim_page = UiPimPage(self._driver)
         # ASSERT
-        self.assertNotIn(employee.id, self._ui_pim_page.all_employees_table(),
+        self.assertNotIn(employee_object.id, self._ui_pim_page.all_employees_table(),
                          "Employee still exists.")
 
 
