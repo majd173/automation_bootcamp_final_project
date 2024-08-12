@@ -35,6 +35,13 @@ class TestChangeAdminFullName(unittest.TestCase):
         This method tests changing admin full name - UI & API.
         Test case: TC-04 / Change admin full name.
         """
+        logging.info("----------------Test Started----------------")
+        # ARRANGE
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        self._config_file_path = os.path.join(base_dir, '../../orange_hrm.json')
+        self._config = ConfigProvider().load_from_file(self._config_file_path)
+        self._driver = BrowserWrapper().get_driver()
+        self._api = ApiWrapper()
         # ACT
         self._login_page = LogInPage(self._driver)
         cookie = self._login_page.valid_login_flow()
@@ -57,6 +64,7 @@ class TestChangeAdminFullName(unittest.TestCase):
         """
         This method closes driver.
         """
+        self._jira_flag = JiraHandler()
         if self._fail:
             self._jira_flag.create_issue(self._config['jira_key'], 'test_change_admin_fullname',
                                          'AssertionError: Wrong full name.',

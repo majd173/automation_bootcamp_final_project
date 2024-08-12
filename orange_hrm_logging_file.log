@@ -286,3 +286,22 @@
 2024-08-12 07:25:39,163:INFO:Receiving table of all employees.:
 2024-08-12 07:25:43,059:INFO:----------------Test Completed----------------
 :
+2024-08-12 09:34:23,086:INFO:----------------Test Started----------------:
+2024-08-12 09:34:28,150:INFO:Trying a valid logging in flow process.:
+2024-08-12 09:34:29,952:INFO:Sending a post request to add a new post.:
+2024-08-12 09:34:30,629:INFO:----------------Test Completed----------------
+:
+2024-08-12 09:37:36,537:INFO:----------------Test Started----------------:
+2024-08-12 09:37:41,171:INFO:----------------Test Started----------------:
+2024-08-12 09:37:46,149:INFO:Trying a valid logging in flow process.:
+2024-08-12 09:37:47,237:INFO:Sending a put request to change admin full name.:
+2024-08-12 09:37:50,785:INFO:----------------Test Completed----------------
+:
+2024-08-12 09:39:05,772:INFO:----------------Test Started----------------:
+2024-08-12 09:39:09,522:INFO:Trying a valid logging in flow process.:
+2024-08-12 09:39:11,077:INFO:Sending a post request to add a new employee.:
+2024-08-12 09:39:12,022:INFO:Sending a get request to receive an employee number by his/her id.:
+2024-08-12 09:39:12,879:INFO:Sending a delete request to delete an employee.:
+2024-08-12 09:39:13,931:INFO:Receiving table of all employees.:
+2024-08-12 09:39:16,060:INFO:----------------Test Completed----------------
+:
