@@ -1,0 +1,2 @@
+[32mINFO    [0m root:test_delete_non_existent_employee.py:20 ----------------Test Started----------------
+[33mWARNING [0m selenium.webdriver.common.selenium_manager:selenium_manager.py:135 Exception managing chrome: error sending request for url (https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json)

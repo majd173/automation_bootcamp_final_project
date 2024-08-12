@@ -1,0 +1,4 @@
+[32mINFO    [0m root:test_share_a_photo_by_post.py:21 ----------------Test Started----------------
+[32mINFO    [0m root:log_in_page.py:106 Trying a valid logging in flow process.
+[32mINFO    [0m root:home_page.py:213 Sending a post request to share a photo by post.
+[32mINFO    [0m root:test_share_a_photo_by_post.py:34 ----------------Test Completed----------------

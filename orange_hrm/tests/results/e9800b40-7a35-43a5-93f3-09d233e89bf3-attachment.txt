@@ -1,0 +1,5 @@
+[32mINFO    [0m root:test_search_for_an_employee.py:21 ----------------Test Started----------------
+[32mINFO    [0m root:log_in_page.py:106 Trying a valid logging in flow process.
+[32mINFO    [0m root:home_page.py:81 Sending a post request to add a new employee.
+[32mINFO    [0m root:home_page.py:193 Sending a get request to search for an employee.
+[32mINFO    [0m root:test_search_for_an_employee.py:34 ----------------Test Completed----------------

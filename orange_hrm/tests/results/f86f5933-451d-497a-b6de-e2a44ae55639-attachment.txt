@@ -1,0 +1,5 @@
+[32mINFO    [0m root:test_login.py:21 ----------------Test Started----------------
+[32mINFO    [0m root:log_in_page.py:106 Trying a valid logging in flow process.
+[32mINFO    [0m root:log_in_page.py:161 Trying valid logging out flow process, by checking visibility of login button after submitting a logout.
+[32mINFO    [0m root:log_in_page.py:167 Login button is displayed.
+[32mINFO    [0m root:test_login.py:33 ----------------Test Completed----------------

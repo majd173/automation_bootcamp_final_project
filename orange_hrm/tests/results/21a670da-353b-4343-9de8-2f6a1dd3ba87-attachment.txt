@@ -1,0 +1,4 @@
+[32mINFO    [0m root:test_delete_non_existent_employee.py:20 ----------------Test Started----------------
+[32mINFO    [0m root:log_in_page.py:106 Trying a valid logging in flow process.
+[32mINFO    [0m root:home_page.py:152 Sending a delete request to delete an employee.
+[32mINFO    [0m root:test_delete_non_existent_employee.py:32 ----------------Test Completed----------------

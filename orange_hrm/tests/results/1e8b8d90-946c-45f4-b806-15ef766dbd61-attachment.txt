@@ -1,0 +1,4 @@
+[32mINFO    [0m root:test_change_admin_city_and_mobile.py:25 ----------------Test Started----------------
+[32mINFO    [0m root:log_in_page.py:106 Trying a valid logging in flow process.
+[32mINFO    [0m root:home_page.py:65 Sending a put request to change admin city and mobile number.
+[32mINFO    [0m root:test_change_admin_city_and_mobile.py:39 ----------------Test Completed----------------

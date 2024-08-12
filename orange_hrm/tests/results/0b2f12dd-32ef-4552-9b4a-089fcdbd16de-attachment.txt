@@ -1,0 +1,11 @@
+[32mINFO    [0m root:test_add_a_new_job.py:22 ----------------Test Started----------------
+[32mINFO    [0m root:test_add_a_new_job.py:42 -------------Testing Add A New Job------------
+[32mINFO    [0m root:log_in_page.py:106 Trying a valid logging in flow process.
+[32mINFO    [0m root:home_page.py:189 Clicking on admin button.
+[32mINFO    [0m root:admin_page.py:30 Clicking on job button.
+[32mINFO    [0m root:admin_page.py:45 Clicking on job categories button.
+[32mINFO    [0m root:job_categories_page.py:30 Clicking on add job button.
+[32mINFO    [0m root:add_save_job_page.py:29 Inserting new job name.
+[32mINFO    [0m root:add_save_job_page.py:44 Clicking on save button.
+[32mINFO    [0m root:job_categories_page.py:45 Receiving job categories table.
+[32mINFO    [0m root:test_add_a_new_job.py:34 ----------------Test Completed----------------

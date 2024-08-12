@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="15" time="265.737" timestamp="2024-08-12T07:45:15.372253+03:00" hostname="DESKTOP-DB3BQ5K"><testcase classname="tests.api.test_add_a_new_post.TestAddANewPost" name="test_add_a_new_post" time="14.737" /><testcase classname="tests.api.test_delete_non_existent_employee.TestDeleteNonExistentEmployee" name="test_non_existent_employee" time="14.739" /><testcase classname="tests.api.test_search_for_an_employee.TestSearchForAnEmployee" name="test_search_for_an_employee" time="22.546" /><testcase classname="tests.api.test_verify_hiring_manager.TestVerifyHiringManager" name="test_verify_hiring_manager" time="14.001" /><testcase classname="tests.ui.test_add_a_new_job.TestAddANewJob" name="test_add_a_new_job" time="24.832" /><testcase classname="tests.ui.test_login.TestLogin" name="test_invalid_login_process" time="15.796" /><testcase classname="tests.ui.test_login.TestLogin" name="test_logout_process" time="17.183" /><testcase classname="tests.ui.test_login.TestLogin" name="test_valid_login_process" time="22.497" /><testcase classname="tests.ui_api.test_active_employees_number.TestActiveEmployeesNumber" name="test_active_employees_number" time="17.305" /><testcase classname="tests.ui_api.test_add_a_new_employee.TestAddANewEmployee" name="test_add_a_new_employee" time="21.909" /><testcase classname="tests.ui_api.test_change_admin_city_and_mobile.TestAdminDetails" name="test_change_admin_city_and_mobile" time="16.786" /><testcase classname="tests.ui_api.test_change_admin_full_name.TestChangeAdminFullName" name="test_change_admin_fullname" time="13.529"><failure message="AssertionError">self = &lt;orange_hrm.tests.ui_api.test_change_admin_full_name.TestChangeAdminFullName testMethod=test_change_admin_fullname&gt;
+
+    def test_change_admin_fullname(self):
+        """
+        THIS TEST WAS FAILED ON PURPOSE IN ORDER TO RUN JIRA ISSUE.
+        This method tests changing admin full name - UI &amp; API.
+        Test case: TC-04 / Change admin full name.
+        """
+        # ACT
+        self._login_page = LogInPage(self._driver)
+        cookie = self._login_page.valid_login_flow()
+        self._api_home_page = APIHomePage(self._api)
+        admin_object = AdminObject(Utilities.generate_random_string_only_letters(5).lower(),
+                                   Utilities.generate_random_string_only_letters(5).lower(),
+                                   Utilities.generate_random_string_only_letters(5).lower())
+        self._api_home_page.change_admin_full_name(cookie, admin_object)
+        home_page = UiHomePage(self._driver)
+        home_page.refresh_page()
+        # ASSERT
+        try:
+&gt;           self.assertEqual(home_page.get_admin_full_name()[1], admin_object.first_name, "Wrong first name")
+E           AssertionError: 'gamgr' != 'nazeu'
+E           - gamgr
+E           + nazeu
+E            : Wrong first name
+
+tests\ui_api\test_change_admin_full_name.py:50: AssertionError
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;orange_hrm.tests.ui_api.test_change_admin_full_name.TestChangeAdminFullName testMethod=test_change_admin_fullname&gt;
+
+    def test_change_admin_fullname(self):
+        """
+        THIS TEST WAS FAILED ON PURPOSE IN ORDER TO RUN JIRA ISSUE.
+        This method tests changing admin full name - UI &amp; API.
+        Test case: TC-04 / Change admin full name.
+        """
+        # ACT
+        self._login_page = LogInPage(self._driver)
+        cookie = self._login_page.valid_login_flow()
+        self._api_home_page = APIHomePage(self._api)
+        admin_object = AdminObject(Utilities.generate_random_string_only_letters(5).lower(),
+                                   Utilities.generate_random_string_only_letters(5).lower(),
+                                   Utilities.generate_random_string_only_letters(5).lower())
+        self._api_home_page.change_admin_full_name(cookie, admin_object)
+        home_page = UiHomePage(self._driver)
+        home_page.refresh_page()
+        # ASSERT
+        try:
+            self.assertEqual(home_page.get_admin_full_name()[1], admin_object.first_name, "Wrong first name")
+            self.assertEqual(home_page.get_admin_full_name()[0], admin_object.last_name, "Wrong last name")
+        except:
+            self._fail = True
+&gt;           raise AssertionError
+E           AssertionError
+
+tests\ui_api\test_change_admin_full_name.py:54: AssertionError</failure></testcase><testcase classname="tests.ui_api.test_change_admin_gender.TestChangeAdminGender" name="test_change_employee_gender" time="16.241" /><testcase classname="tests.ui_api.test_delete_an_employee.TestDeleteAnEmployee" name="test_delete_an_employee" time="16.752" /><testcase classname="tests.ui_api.test_share_a_photo_by_post.TestSharePhoto" name="test_share_a_photo_by_post" time="15.899" /></testsuite></testsuites>

@@ -1,0 +1,6 @@
+[32mINFO    [0m root:test_delete_an_employee.py:23 ----------------Test Started----------------
+[32mINFO    [0m root:log_in_page.py:106 Trying a valid logging in flow process.
+[32mINFO    [0m root:home_page.py:81 Sending a post request to add a new employee.
+[32mINFO    [0m root:home_page.py:129 Sending a get request to receive an employee number by his/her id.
+[32mINFO    [0m root:home_page.py:152 Sending a delete request to delete an employee.
+[32mINFO    [0m root:test_delete_an_employee.py:36 ----------------Test Completed----------------

@@ -1,0 +1,4 @@
+[32mINFO    [0m root:test_change_admin_full_name.py:23 ----------------Test Started----------------
+[32mINFO    [0m root:log_in_page.py:106 Trying a valid logging in flow process.
+[32mINFO    [0m root:home_page.py:49 Sending a put request to change admin full name.
+[32mINFO    [0m root:test_change_admin_full_name.py:41 ----------------Test Completed----------------

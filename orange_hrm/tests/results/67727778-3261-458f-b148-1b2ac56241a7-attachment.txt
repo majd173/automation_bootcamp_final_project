@@ -1,0 +1,4 @@
+[32mINFO    [0m root:test_login.py:21 ----------------Test Started----------------
+[32mINFO    [0m root:log_in_page.py:126 Trying an invalid logging in flow process.
+[32mINFO    [0m root:log_in_page.py:143 Invalid login message is displayed.
+[32mINFO    [0m root:test_login.py:33 ----------------Test Completed----------------
