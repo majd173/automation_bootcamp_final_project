@@ -31,6 +31,6 @@ class UiPimPage(BasePage):
             else:
                 return None
         except NoSuchElementException:
-            logging.error("Element can not be found.")
+            logging.error("Element of employees table can not be found.")
             return None
 

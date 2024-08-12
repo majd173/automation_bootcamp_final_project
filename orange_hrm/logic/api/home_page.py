@@ -102,7 +102,7 @@ class APIHomePage:
                 employee.to_dict())
             return response
         except requests.RequestException as e:
-            logging.error(f'Post request has not been sent.: {e}')
+            logging.error(f'Post request to add a new employee has not been sent.: {e}')
 
     def get_active_employees_number(self, cookie):
         """
@@ -156,7 +156,7 @@ class APIHomePage:
                 logging.error(f'Employee with {id} not found.')
                 return None
         except requests.RequestException as e:
-            logging.error(f'Get request has not been sent.: {e}')
+            logging.error(f'Get request  to receive an employee number by his/her id has not been sent.: {e}')
             return None
 
     def delete_an_employee(self, cookie, employee_number):
