@@ -1,9 +1,9 @@
 import logging
 import os
 import unittest
-#-----------------------------INFRA CLASSES---------------------------
+# -----------------------------INFRA CLASSES---------------------------
 from orange_hrm.infra.ui.browser_wrapper import BrowserWrapper
-#-----------------------------LOGIC CLASSES---------------------------
+# -----------------------------LOGIC CLASSES---------------------------
 from orange_hrm.infra.config_provider import ConfigProvider
 from orange_hrm.logic.ui.home_page import UiHomePage
 from orange_hrm.logic.ui.log_in_page import LogInPage

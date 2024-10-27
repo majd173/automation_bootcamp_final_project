@@ -1,6 +1,6 @@
 {
   "api_base_url": "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/",
-  "browser" : "Chrome",
+  "browser" : "FireFox",
 
   "login_url": "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login",
   "username": "Admin",

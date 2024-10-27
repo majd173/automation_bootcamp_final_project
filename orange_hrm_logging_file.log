@@ -354,3 +354,159 @@
 2024-08-12 13:15:42,348:INFO:Sending a put request to change admin full name.:
 2024-08-12 13:15:46,899:INFO:----------------Test Completed----------------
 :
+2024-08-12 13:48:25,453:INFO:----------------Test Started----------------:
+2024-08-12 13:48:29,320:INFO:Trying a valid logging in flow process.:
+2024-08-12 13:48:31,317:INFO:Sending a post request to add a new employee.:
+2024-08-12 13:48:32,010:INFO:Sending a get request to receive an employee number by his/her id.:
+2024-08-12 13:48:33,257:INFO:Sending a delete request to delete an employee.:
+2024-08-12 13:48:35,233:INFO:Receiving table of all employees.:
+2024-08-12 13:48:39,276:INFO:----------------Test Completed----------------
+:
+2024-08-12 14:13:58,839:INFO:----------------Test Started----------------:
+2024-08-12 14:14:05,117:INFO:Trying a valid logging in flow process.:
+2024-08-12 14:14:06,897:INFO:Sending a post request to add a new employee.:
+2024-08-12 14:14:07,867:INFO:Sending a get request to receive an employee number by his/her id.:
+2024-08-12 14:14:08,325:INFO:Sending a delete request to delete an employee.:
+2024-08-12 14:14:09,586:INFO:Receiving table of all employees.:
+2024-08-12 14:14:12,350:INFO:----------------Test Completed----------------
+:
+2024-08-12 14:15:04,309:INFO:----------------Test Started----------------:
+2024-08-12 14:15:10,237:INFO:----------------Test Started----------------:
+2024-08-12 14:15:15,791:INFO:Trying a valid logging in flow process.:
+2024-08-12 14:15:17,163:INFO:Sending a put request to change admin full name.:
+2024-08-12 14:15:20,744:INFO:----------------Test Completed----------------
+:
+2024-09-14 17:27:06,904:INFO:----------------Test Started----------------:
+2024-09-14 17:27:07,417:WARNING:The chromedriver version (127.0.6533.88) detected in PATH at C:\Users\Admin\Desktop\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (128.0.6613.138); currently, chromedriver 128.0.6613.137 is recommended for chrome 128.*, so it is advised to delete the driver in PATH and retry:
+2024-09-14 17:27:10,727:INFO:-------------Testing Add A New Job------------:
+2024-09-14 17:27:10,733:INFO:Trying a valid logging in flow process.:
+2024-09-14 17:27:13,938:INFO:Clicking on admin button.:
+2024-09-14 17:27:14,560:INFO:Clicking on job button.:
+2024-09-14 17:27:15,483:INFO:Clicking on job categories button.:
+2024-09-14 17:27:16,427:INFO:Clicking on add job button.:
+2024-09-14 17:27:17,068:INFO:Inserting new job name.:
+2024-09-14 17:27:17,145:INFO:Clicking on save button.:
+2024-09-14 17:27:22,022:INFO:Receiving job categories table.:
+2024-09-14 17:27:22,148:INFO:----------------Test Completed----------------
+:
+2024-10-01 09:03:30,407:INFO:----------------Test Started----------------:
+2024-10-01 09:03:33,045:WARNING:The chromedriver version (127.0.6533.88) detected in PATH at C:\Users\Admin\Desktop\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (129.0.6668.60); currently, chromedriver 129.0.6668.70 is recommended for chrome 129.*, so it is advised to delete the driver in PATH and retry:
+2024-10-17 17:10:28,272:INFO:----------------Test Started----------------:
+2024-10-17 17:10:28,629:WARNING:The chromedriver version (127.0.6533.88) detected in PATH at C:\Users\Admin\Desktop\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (129.0.6668.101); currently, chromedriver 129.0.6668.100 is recommended for chrome 129.*, so it is advised to delete the driver in PATH and retry:
+2024-10-17 17:11:05,694:INFO:----------------Test Started----------------:
+2024-10-17 17:11:17,003:INFO:Trying a valid logging in flow process.:
+2024-10-17 17:11:19,409:INFO:Sending a post request to add a new post.:
+2024-10-17 17:11:21,068:INFO:----------------Test Completed----------------
+:
+2024-10-17 17:17:11,258:INFO:----------------Test Started----------------:
+2024-10-17 17:17:11,652:WARNING:The chromedriver version (127.0.6533.88) detected in PATH at C:\Users\Admin\Desktop\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (129.0.6668.101); currently, chromedriver 129.0.6668.100 is recommended for chrome 129.*, so it is advised to delete the driver in PATH and retry:
+2024-10-17 17:47:39,142:INFO:----------------Test Started----------------:
+2024-10-17 17:47:48,808:INFO:Trying a valid logging in flow process.:
+2024-10-17 17:47:50,598:INFO:Sending a put request to change admin full name.:
+2024-10-17 17:47:51,346:INFO:Sending a get request to receive hiring manager first name.:
+2024-10-17 17:47:53,087:INFO:----------------Test Completed----------------
+:
+2024-10-17 17:48:06,368:INFO:----------------Test Started----------------:
+2024-10-17 17:48:18,326:INFO:Trying a valid logging in flow process.:
+2024-10-17 17:48:21,137:INFO:Sending a post request to add a new employee.:
+2024-10-17 17:48:21,772:INFO:Sending a get request to search for an employee.:
+2024-10-17 17:48:23,576:INFO:----------------Test Completed----------------
+:
+2024-10-18 12:01:04,388:INFO:----------------Test Started----------------:
+2024-10-18 12:01:16,973:INFO:Trying a valid logging in flow process.:
+2024-10-18 12:01:18,391:INFO:Sending a delete request to delete an employee.:
+2024-10-18 12:01:18,981:INFO:----------------Test Completed----------------
+:
+2024-10-18 12:05:42,350:INFO:----------------Test Started----------------:
+2024-10-18 12:05:52,569:INFO:Trying a valid logging in flow process.:
+2024-10-18 12:05:54,243:INFO:Sending a post request to add a new employee.:
+2024-10-18 12:05:54,882:INFO:Sending a get request to search for an employee.:
+2024-10-18 12:05:56,563:INFO:----------------Test Completed----------------
+:
+2024-10-18 12:06:41,351:INFO:----------------Test Started----------------:
+2024-10-18 12:06:50,815:INFO:Trying a valid logging in flow process.:
+2024-10-18 12:06:52,405:INFO:Sending a put request to change admin full name.:
+2024-10-18 12:06:53,145:INFO:Sending a get request to receive hiring manager first name.:
+2024-10-18 12:06:54,875:INFO:----------------Test Completed----------------
+:
+2024-10-18 12:07:09,455:INFO:----------------Test Started----------------:
+2024-10-18 12:07:18,996:INFO:-------------Testing Add A New Job------------:
+2024-10-18 12:07:19,002:INFO:Trying a valid logging in flow process.:
+2024-10-18 12:07:22,513:INFO:Clicking on admin button.:
+2024-10-18 12:07:23,267:INFO:Clicking on job button.:
+2024-10-18 12:07:23,356:INFO:Clicking on job categories button.:
+2024-10-18 12:07:24,182:INFO:Clicking on add job button.:
+2024-10-18 12:07:34,315:ERROR:Time out error.:
+2024-10-18 12:07:34,587:INFO:Clicking on save button.:
+2024-10-18 12:07:44,711:ERROR:Time out error.:
+2024-10-18 12:07:45,751:INFO:----------------Test Completed----------------
+:
+2024-10-18 12:07:45,752:INFO:----------------Test Started----------------:
+2024-10-18 12:07:55,068:INFO:Trying an invalid logging in flow process.:
+2024-10-18 12:07:56,934:INFO:Invalid login message is displayed.:
+2024-10-18 12:07:58,138:INFO:----------------Test Completed----------------
+:
+2024-10-18 12:08:00,207:INFO:----------------Test Started----------------:
+2024-10-18 12:08:13,370:INFO:Trying a valid logging in flow process.:
+2024-10-18 12:08:17,595:INFO:Trying valid logging out flow process, by checking visibility of login button after submitting a logout.:
+2024-10-18 12:08:18,135:INFO:Login button is displayed.:
+2024-10-18 12:08:19,190:INFO:----------------Test Completed----------------
+:
+2024-10-18 12:08:21,222:INFO:----------------Test Started----------------:
+2024-10-18 12:08:30,615:INFO:Trying a valid logging in flow process.:
+2024-10-18 12:08:33,915:INFO:----------------Test Completed----------------
+:
+2024-10-18 12:09:45,134:INFO:----------------Test Started----------------:
+2024-10-18 12:09:54,861:INFO:-------------Testing Add A New Job------------:
+2024-10-18 12:09:54,867:INFO:Trying a valid logging in flow process.:
+2024-10-18 12:09:58,787:INFO:Clicking on admin button.:
+2024-10-18 12:09:59,545:INFO:Clicking on job button.:
+2024-10-18 12:09:59,651:INFO:Clicking on job categories button.:
+2024-10-18 12:10:00,295:INFO:Clicking on add job button.:
+2024-10-18 12:10:10,524:ERROR:Time out error.:
+2024-10-18 12:10:14,316:INFO:Clicking on save button.:
+2024-10-18 12:12:04,414:INFO:----------------Test Started----------------:
+2024-10-18 12:12:14,358:INFO:-------------Testing Add A New Job------------:
+2024-10-18 12:12:14,358:INFO:Trying a valid logging in flow process.:
+2024-10-18 12:12:29,421:INFO:Clicking on admin button.:
+2024-10-18 12:12:39,281:INFO:Clicking on job button.:
+2024-10-18 12:12:43,974:INFO:Clicking on job categories button.:
+2024-10-18 12:12:51,410:INFO:Clicking on add job button.:
+2024-10-18 12:13:00,908:INFO:Inserting new job name.:
+2024-10-18 12:13:03,752:INFO:Clicking on save button.:
+2024-10-18 12:13:10,299:INFO:Receiving job categories table.:
+2024-10-18 12:13:15,496:INFO:----------------Test Completed----------------
+:
+2024-10-18 12:14:00,615:INFO:----------------Test Started----------------:
+2024-10-18 12:14:10,071:INFO:-------------Testing Add A New Job------------:
+2024-10-18 12:14:10,078:INFO:Trying a valid logging in flow process.:
+2024-10-18 12:14:13,541:INFO:Clicking on admin button.:
+2024-10-18 12:14:14,303:INFO:Clicking on job button.:
+2024-10-18 12:14:14,400:INFO:Clicking on job categories button.:
+2024-10-18 12:14:15,341:INFO:Clicking on add job button.:
+2024-10-18 12:14:25,533:ERROR:Time out error.:
+2024-10-18 12:14:27,843:INFO:Clicking on save button.:
+2024-10-18 12:14:27,881:INFO:Receiving job categories table.:
+2024-10-18 12:14:29,037:INFO:----------------Test Completed----------------
+:
+2024-10-18 12:14:56,957:INFO:----------------Test Started----------------:
+2024-10-18 12:15:05,055:INFO:-------------Testing Add A New Job------------:
+2024-10-18 12:15:05,055:INFO:Trying a valid logging in flow process.:
+2024-10-18 12:15:07,892:INFO:Clicking on admin button.:
+2024-10-18 12:15:17,581:INFO:Clicking on job button.:
+2024-10-18 12:18:46,012:INFO:----------------Test Started----------------:
+2024-10-18 12:19:20,886:INFO:----------------Test Started----------------:
+2024-10-18 12:19:29,348:INFO:-------------Testing Add A New Job------------:
+2024-10-18 12:19:29,351:INFO:Trying a valid logging in flow process.:
+2024-10-18 12:19:32,125:INFO:Clicking on admin button.:
+2024-10-18 12:19:32,853:INFO:Clicking on job button.:
+2024-10-18 12:19:32,895:INFO:Clicking on job categories button.:
+2024-10-18 12:19:33,445:INFO:Clicking on add job button.:
+2024-10-18 12:19:54,749:INFO:----------------Test Started----------------:
+2024-10-18 12:20:02,835:INFO:Trying a valid logging in flow process.:
+2024-10-18 12:20:04,085:INFO:Sending a post request to share a photo by post.:
+2024-10-18 12:20:07,939:INFO:----------------Test Completed----------------
+:
+2024-10-27 12:17:15,993:INFO:----------------Test Started----------------:
+2024-10-27 12:17:26,011:INFO:Trying a valid logging in flow process.:
+2024-10-27 12:17:29,972:INFO:Sending a get request to search for report.:

@@ -261,3 +261,16 @@ class APIHomePage:
         except requests.RequestException as e:
             logging.error(f'Get request has not been sent.: {e}')
             return None
+
+    def search_for_report(self, cookie):
+        try:
+            logging.info("Sending a get request to search for report.")
+            report_name = Utilities.generate_random_string_only_letters(12)
+            report_url = f'pim/reports/defined?name={report_name}'
+            response = self._request.get_request(
+                f'{self._url}{report_url}',
+                cookie)
+            return response
+        except requests.RequestException as e:
+            logging.error(f'Get request has not been sent.: {e}')
+            return None

@@ -11,8 +11,7 @@ from orange_hrm.logic.ui.log_in_page import LogInPage
 from orange_hrm.infra.ui.browser_wrapper import BrowserWrapper
 
 
-class TestDeleteNonExistentEmployee(unittest.TestCase):
-
+class TestReceiveAReport(unittest.TestCase):
     def setUp(self):
         """
         This method initializes driver and loads config file.
@@ -32,23 +31,19 @@ class TestDeleteNonExistentEmployee(unittest.TestCase):
         self._driver.close()
         logging.info("----------------Test Completed----------------\n")
 
-    def test_non_existent_employee(self):
+    def test_receive_a_non_existent_report(self):
         """
-        This method tests deleting a non-existent employee.
-        Test case: TC-14 / Delete a non-existent employee.
+        This method tests if a non-existent report is received.
         """
         # ACT
         self._login_page = LogInPage(self._driver)
         cookie = self._login_page.valid_login_flow()
         self._api_home_page = APIHomePage(self._api)
-        non_existent_employee = self._api_home_page.delete_an_employee(
-            cookie, Utilities.generate_random_number_by_length(12))
+        request_response_data = self._api_home_page.search_for_report(cookie).json()
+        meta_total = request_response_data["meta"]["total"]
         # ASSERT
-        self.assertFalse(non_existent_employee.ok,
-                         "Request has been accepted.")
-        self.assertEqual(non_existent_employee.status_code,
-                         404,
-                         "Status code is not 404.")
+        self.assertEqual(meta_total, 0,
+                         "There are reports in the system.")
 
 
 if __name__ == '__main__':
